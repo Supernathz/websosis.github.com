@@ -175,16 +175,20 @@ ul {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  min-width: 200px;
+  min-width: 450px; /* Made wider for 2 columns */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.2rem;
   border-radius: 16px;
   box-shadow: var(--shadow-xl);
   opacity: 0;
-
   visibility: hidden;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding: 0.5rem;
   z-index: 100;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  max-height: 60vh;
+  overflow-y: auto;
 }
 
 .dropdown:hover .dropdown-content {
@@ -488,9 +492,9 @@ footer::before {
 }
 
 .footer-brand h2 span {
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: var(--accent-cyan);
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
 }
 
 .footer-brand p {

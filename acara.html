@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAK IPTO | Kegiatan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .kegiatan-hero {
+            position: relative;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary) 0%, #1a3a5c 50%, #0d2137 100%);
+        }
+        .kegiatan-hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,158,181,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .kegiatan-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(229,123,37,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .kegiatan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        .kegiatan-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+        .kegiatan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        .kegiatan-card-img {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        .kegiatan-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .kegiatan-card:hover .kegiatan-card-img img {
+            transform: scale(1.05);
+        }
+        .kegiatan-card-img .date-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .kegiatan-card-img .category-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-cyan);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .kegiatan-card-body {
+            padding: 1.5rem 2rem 2rem;
+        }
+        .kegiatan-card-body h3 {
+            font-size: 1.4rem;
+            color: var(--text-main);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        .kegiatan-card-body p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+        .kegiatan-card-body .read-more {
+            color: var(--accent-cyan);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+        .kegiatan-card:hover .read-more {
+            gap: 1rem;
+        }
+        @media (max-width: 768px) {
+            .kegiatan-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand" style="display:flex; align-items:center; text-decoration: none;">
+                <img src="assets/1000105640.png" alt="Logo OSIS IPTO" style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Homepage</a></li>
+                <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+                <li><a href="anggota.html" class="nav-link">Anggota</a></li>
+                <li class="dropdown">
+                    <a href="komunitas.html" class="nav-link">Komunitas <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="komunitas-animation.html">Animation Community</a>
+                        <a href="komunitas-revival.html">Community of Revival</a>
+                        <a href="komunitas-podcast.html">Podcast Community</a>
+                        <a href="komunitas-pmr.html">PMR Community</a>
+                        <a href="komunitas-theatre.html">Theatre Community</a>
+                        <a href="komunitas-photography.html">Photography Community</a>
+                        <a href="komunitas-emagazine.html">E-Magazine Community</a>
+                        <a href="komunitas-cooking.html">Cooking Community</a>
+                        <a href="komunitas-mural.html">Mural Community</a>
+                        <a href="komunitas-dance.html">Dance Community</a>
+                        <a href="komunitas-paskibra.html">Paskibra Community</a>
+                        <a href="komunitas-music.html">Music Community</a>
+                        <a href="komunitas-tech.html">Tech Community</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="acara.html" class="nav-link active">Acara <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="acara-paskah.html">Acara Paskah</a>
+                        <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
+                    </div>
+                </li>
+            </ul>
+            <a href="contactus.html" class="btn-contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <main style="padding-top: var(--nav-height);">
+        <!-- Hero -->
+        <section class="kegiatan-hero">
+            <div class="container" style="text-align: center; color: white; z-index: 1; position: relative;">
+                <span class="animate-fade-up" style="display: inline-block; font-weight: 700; letter-spacing: 3px; color: var(--accent-yellow); margin-bottom: 1.5rem; text-transform: uppercase; background: rgba(0,0,0,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; backdrop-filter: blur(10px);">Student Life</span>
+                <h1 class="font-heading animate-fade-up delay-1" style="font-size: 4.5rem; font-weight: 800; color: white; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -1.5px;">Kegiatan SMAK IPTO</h1>
+                <p class="animate-fade-up delay-2" style="font-size: 1.3rem; font-weight: 400; max-width: 650px; margin: 0 auto; color: rgba(255,255,255,0.85);">Berbagai kegiatan yang memperkaya pengalaman dan membentuk karakter siswa/i SMAK IPTO</p>
+            </div>
+        </section>
+
+        <!-- Activity Cards -->
+        <section class="section container" style="padding-top: 4rem; padding-bottom: 8rem;">
+            <div class="kegiatan-grid">
+                <!-- Paskah Card -->
+                <a href="acara-paskah.html" class="kegiatan-card animate-fade-up">
+                    <div class="kegiatan-card-img">
+                        <img src="https://images.unsplash.com/photo-1544427920-c49ccbc8e252?auto=format&fit=crop&w=800" alt="Paskah 2026">
+                        <span class="date-badge"><i class="fa-regular fa-calendar"></i> 3 April 2026</span>
+                        <span class="category-badge">Kerohanian</span>
+                    </div>
+                    <div class="kegiatan-card-body">
+                        <h3>Paskah 2026</h3>
+                        <p>Perayaan Paskah bersama seluruh keluarga besar SMAK IPTO dengan tema "Kebangkitan-Nya Membawa Pengharapan Baru".</p>
+                        <span class="read-more">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- JAWA's Social Quest Card -->
+                <a href="acara-jawa-social-quest.html" class="kegiatan-card animate-fade-up delay-1">
+                    <div class="kegiatan-card-img">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=800" alt="JAWA's Social Quest">
+                        <span class="date-badge"><i class="fa-regular fa-calendar"></i> 2026</span>
+                        <span class="category-badge">Sosial</span>
+                    </div>
+                    <div class="kegiatan-card-body">
+                        <h3>JAWA's Social Quest</h3>
+                        <p>Kegiatan sosial yang mengajak siswa/i untuk terjun langsung ke masyarakat, membangun empati dan kepedulian sosial.</p>
+                        <span class="read-more">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>OSIS<span>SMAK</span>IPTO</h2>
+                <p>Membentuk pemimpin masa depan yang melayani dengan ketulusan dan berintegritas tinggi berdasarkan iman Kristiani.</p>
+                <div class="social-links"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
+            </div>
+            <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="anggota.html">Anggota</a></li><li></li><li><a href="acara.html">Acara</a></li></ul></div>
+            <div class="footer-links"><h4>Contact Us</h4><ul><li><a href="#"><i class="fa-solid fa-location-dot" style="margin-right:10px;"></i> Jl. Macan No.21, Jakarta Barat</a></li><li><a href="#"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i> osis@smakipto.sch.id</a></li><li><a href="#"><i class="fa-brands fa-whatsapp" style="margin-right:10px;"></i> +62 812 3456 7890</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 OSIS SMAK IPEKA Tomang. All rights reserved.</p></div>
+    </footer>
+</body>
+</html>

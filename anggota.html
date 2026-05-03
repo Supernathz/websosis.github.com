@@ -61,7 +61,7 @@
         }
 
         .member-info {
-            padding: 2rem 1.5rem;
+            padding: 0.6rem 1rem 1.2rem;
             position: relative;
             background: white;
         }
@@ -72,7 +72,7 @@
             font-size: 0.85rem;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
             font-family: 'Poppins', sans-serif;
         }
 
@@ -111,6 +111,19 @@
         .social-row a:hover {
             color: var(--accent-cyan);
         }
+
+        .members-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.8rem;
+        }
+
+        .members-grid .member-card {
+            flex: 1 1 280px;
+            max-width: 350px;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -125,12 +138,32 @@
                 <li><a href="index.html" class="nav-link">Homepage</a></li>
                 <li><a href="aboutus.html" class="nav-link">About Us</a></li>
                 <li><a href="anggota.html" class="nav-link active">Anggota</a></li>
+
+                <li class="dropdown">
+                    <a href="komunitas.html" class="nav-link">Komunitas <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="komunitas-animation.html">Animation Community</a>
+                        <a href="komunitas-revival.html">Community of Revival</a>
+                        <a href="komunitas-podcast.html">Podcast Community</a>
+                        <a href="komunitas-pmr.html">PMR Community</a>
+                        <a href="komunitas-theatre.html">Theatre Community</a>
+                        <a href="komunitas-photography.html">Photography Community</a>
+                        <a href="komunitas-emagazine.html">E-Magazine Community</a>
+                        <a href="komunitas-cooking.html">Cooking Community</a>
+                        <a href="komunitas-mural.html">Mural Community</a>
+                        <a href="komunitas-dance.html">Dance Community</a>
+                        <a href="komunitas-paskibra.html">Paskibra Community</a>
+                        <a href="komunitas-music.html">Music Community</a>
+                        <a href="komunitas-tech.html">Tech Community</a>
+                    </div>
+                </li>
                 <li class="dropdown">
                     <a href="acara.html" class="nav-link">Acara <i class="fa-solid fa-chevron-down"
                             style="font-size: 0.8em; margin-left: 5px;"></i></a>
                     <div class="dropdown-content">
-                        <a href="komunitas.html">Komunitas</a>
                         <a href="acara-paskah.html">Acara Paskah</a>
+                        <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
                     </div>
                 </li>
             </ul>
@@ -139,420 +172,432 @@
     </nav>
 
     <main style="padding-top: var(--nav-height);">
-        <!-- BPH Section -->
+        <!-- Header Section -->
         <section class="section"
             style="background: radial-gradient(circle at top center, var(--white-blue) 0%, var(--bg-color) 100%); text-align:center; padding: 8rem 5% 4rem;">
             <div class="container animate-fade-up">
                 <span
-                    style="color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Badan
-                    Pengurus Harian</span>
+                    style="color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Kenali
+                    Kami Lebih Dekat</span>
                 <h1 class="font-heading"
                     style="font-size: 4rem; margin-top:0.5rem; margin-bottom:1rem; color:var(--primary); letter-spacing: -1px;">
-                    Pengurus Inti</h1>
+                    Anggota OSIS</h1>
                 <p style="font-size: 1.25rem; color: var(--text-muted); max-width:700px; margin: 0 auto;">Pilar utama di
                     balik setiap jalannya program OSIS SMAK IPTO. Kami hadir untuk melayani.</p>
             </div>
         </section>
-        <section class="section container" style="padding-top: 2rem; padding-bottom: 4rem;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 3rem;">
+
+        <!-- BPH Section -->
+        <section class="section" style="text-align:center; padding: 4rem 5% 0.2rem;">
+            <div class="container animate-fade-up">
+                <span
+                    style="color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Badan
+                    Pengurus Harian</span>
+                <h2 class="font-heading"
+                    style="font-size: 3rem; margin-top:0.5rem; margin-bottom: 0.5rem; color:var(--primary); letter-spacing: -1px;">
+                    Pengurus Inti
+                </h2>
+            </div>
+        </section>
+        <section class="section container" style="padding-bottom: 2.5rem;">
+            <div class="members-grid">
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/BPH (GURU)/Slamet.JPG" alt="Pembina"></div>
                     <div class="member-info">
                         <div class="member-role">Pembina</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Bp. Slamet Widodo
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Bp. Slamet Widodo
                         </h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Membimbing dengan kesabaran dan keteladanan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Membimbing dengan kesabaran dan keteladanan.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/slamet3451/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/BPH (MURID)/Justin.jpg" alt="Ketua OSIS"></div>
                     <div class="member-info">
                         <div class="member-role">Ketua OSIS</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Justin Phelix Phang -
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Justin Phelix Phang -
                             11.3</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Melayani dengan Hati, Memimpin dengan Aksi."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Melayani dengan Hati, Memimpin dengan Aksi.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/juicetinp/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/BPH (MURID)/Andrew.JPG" alt="Wakil Ketua OSIS"></div>
                     <div class="member-info">
                         <div class="member-role">Wakil Ketua OSIS</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Andrew Gunawan - 11.2
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Andrew Gunawan - 11.2
                         </h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Kolaborasi adalah kunci dari setiap keberhasilan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Kolaborasi adalah kunci dari setiap keberhasilan.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/drewwgunawan/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/BPH (MURID)/maureen.JPG" alt="Sekretaris 1"></div>
                     <div class="member-info">
                         <div class="member-role">Sekretaris 1</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Maureen Adella Hendra
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Maureen Adella Hendra
                             - 10.3</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Kerapian sistem memastikan kelancaran program."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Kerapian sistem memastikan kelancaran program.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/maureen_adella11/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/BPH (MURID)/Graciella.JPG" alt="Sekretaris 2"></div>
                     <div class="member-info">
                         <div class="member-role">Sekretaris 2</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Graciella Liusdiawan
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Graciella Liusdiawan
                             - 11.1</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Administrasi yang baik adalah awal dari kesuksesan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Administrasi yang baik adalah awal dari kesuksesan.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/grac.ellai/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/BPH (MURID)/Kaylee.JPG" alt="Bendahara"></div>
                     <div class="member-info">
                         <div class="member-role">Bendahara</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Kaylee Noveline Koh -
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Kaylee Noveline Koh -
                             11.3</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Integritas dalam setiap langkah operasional."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Integritas dalam setiap langkah operasional.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/kay.nvl/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Sekbid 1 Section -->
-        <section class="section" style="text-align:center; padding: 4rem 5% 2rem;">
+        <section class="section" style="text-align:center; padding: 2.5rem 5% 0.2rem;">
             <div class="container animate-fade-up">
                 <span
                     style="color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Seksi
                     Bidang 1</span>
                 <h2 class="font-heading"
-                    style="font-size: 3rem; margin-top:0.5rem; color:var(--primary); letter-spacing: -1px;">Sekbid 1
+                    style="font-size: 3rem; margin-top:0.5rem; margin-bottom: 0.5rem; color:var(--primary); letter-spacing: -1px;">
+                    Sekbid 1
                 </h2>
             </div>
         </section>
-        <section class="section container" style="padding-bottom: 4rem;">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 3rem; justify-content: center;">
+        <section class="section container" style="padding-bottom: 2.5rem;">
+            <div class="members-grid">
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 1/Bernard.JPG" alt="Anggota Sekbid 1"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 1</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Bernard Yoe - 11.1
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Bernard Yoe - 11.1
                         </h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Membangun karakter dan spiritualitas unggul."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Membangun karakter dan spiritualitas unggul.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/bernard.y_o_e/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 1/Bravian.jpeg" alt="Anggota Sekbid 1"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 1</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Bravian Abner Trisno
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Bravian Abner Trisno
                             - 10.1</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Membangun karakter dan spiritualitas unggul."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Membangun karakter dan spiritualitas unggul.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/bravian_abner_trisno/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Sekbid 2 Section -->
-        <section class="section" style="text-align:center; padding: 4rem 5% 2rem;">
+        <section class="section" style="text-align:center; padding: 2.5rem 5% 0.2rem;">
             <div class="container animate-fade-up">
                 <span
                     style="color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Seksi
                     Bidang 2</span>
                 <h2 class="font-heading"
-                    style="font-size: 3rem; margin-top:0.5rem; color:var(--primary); letter-spacing: -1px;">Sekbid 2
+                    style="font-size: 3rem; margin-top:0.5rem; margin-bottom: 0.5rem; color:var(--primary); letter-spacing: -1px;">
+                    Sekbid 2
                 </h2>
             </div>
         </section>
-        <section class="section container" style="padding-bottom: 4rem;">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 3rem; justify-content: center;">
+        <section class="section container" style="padding-bottom: 2.5rem;">
+            <div class="members-grid">
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 2/Sharon.JPG" alt="Anggota Sekbid 2"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 2</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Sharon Lindia Halim -
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Sharon Lindia Halim -
                             11.2</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Menjunjung tinggi nasionalisme dan kebangsaan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Menjunjung tinggi nasionalisme dan kebangsaan.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/lindiasharon0506/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 2/Evangeline.JPG" alt="Anggota Sekbid 2"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 2</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Evangeline Felicia
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Evangeline Felicia
                             Nugraha - 10.2</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Menjunjung tinggi nasionalisme dan kebangsaan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Menjunjung tinggi nasionalisme dan kebangsaan.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/evangeline_feliciaa/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Sekbid 3 Section -->
-        <section class="section" style="text-align:center; padding: 4rem 5% 2rem;">
+        <section class="section" style="text-align:center; padding: 2.5rem 5% 0.2rem;">
             <div class="container animate-fade-up">
                 <span
                     style="color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Seksi
                     Bidang 3</span>
                 <h2 class="font-heading"
-                    style="font-size: 3rem; margin-top:0.5rem; color:var(--primary); letter-spacing: -1px;">Sekbid 3
+                    style="font-size: 3rem; margin-top:0.5rem; margin-bottom: 0.5rem; color:var(--primary); letter-spacing: -1px;">
+                    Sekbid 3
                 </h2>
             </div>
         </section>
-        <section class="section container" style="padding-bottom: 4rem;">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 3rem; justify-content: center;">
+        <section class="section container" style="padding-bottom: 2.5rem;">
+            <div class="members-grid">
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 3/Jayden.JPG" alt="Anggota Sekbid 3"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 3</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Jayden Hartanto -
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Jayden Hartanto -
                             11.3</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Mengembangkan potensi dan kreativitas siswa."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Mengembangkan potensi dan kreativitas siswa.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/jaydenhartanto/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 3/Caroline.JPG" alt="Anggota Sekbid 3"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 3</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Caroline Japutra -
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Caroline Japutra -
                             10.1</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Mengembangkan potensi dan kreativitas siswa."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Mengembangkan potensi dan kreativitas siswa.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/linnn_oline/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Sekbid 4 Section -->
-        <section class="section" style="text-align:center; padding: 4rem 5% 2rem;">
+        <section class="section" style="text-align:center; padding: 2.5rem 5% 0.2rem;">
             <div class="container animate-fade-up">
                 <span
                     style="color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Seksi
                     Bidang 4</span>
                 <h2 class="font-heading"
-                    style="font-size: 3rem; margin-top:0.5rem; color:var(--primary); letter-spacing: -1px;">Sekbid 4
+                    style="font-size: 3rem; margin-top:0.5rem; margin-bottom: 0.5rem; color:var(--primary); letter-spacing: -1px;">
+                    Sekbid 4
                 </h2>
             </div>
         </section>
-        <section class="section container" style="padding-bottom: 4rem;">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 3rem; justify-content: center;">
+        <section class="section container" style="padding-bottom: 2.5rem;">
+            <div class="members-grid">
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 4/Audrey.JPG" alt="Anggota Sekbid 4"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 4</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Audrey Cen - 11.1
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Audrey Cen - 11.1
                         </h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Mewujudkan prestasi akademik yang gemilang."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Mewujudkan prestasi akademik yang gemilang.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/dreyycen/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 4/Jesselyn.JPG" alt="Anggota Sekbid 4"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 4</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Jesselyn Olivia
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Jesselyn Olivia
                             Suriadi - 10.3</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Mewujudkan prestasi akademik yang gemilang."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Mewujudkan prestasi akademik yang gemilang.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/jessselyn_"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 4/Jacklyne.jpg" alt="Anggota Sekbid 4"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 4</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Regina Jacklyne
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Regina Jacklyne
                             Sugiono - 10.2</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Mewujudkan prestasi akademik yang gemilang."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Mewujudkan prestasi akademik yang gemilang.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/jacklyne.sugiono/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Sekbid 5 Section -->
-        <section class="section" style="text-align:center; padding: 4rem 5% 2rem;">
+        <section class="section" style="text-align:center; padding: 2.5rem 5% 0.2rem;">
             <div class="container animate-fade-up">
                 <span
                     style="color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Seksi
                     Bidang 5</span>
                 <h2 class="font-heading"
-                    style="font-size: 3rem; margin-top:0.5rem; color:var(--primary); letter-spacing: -1px;">Sekbid 5
+                    style="font-size: 3rem; margin-top:0.5rem; margin-bottom: 0.5rem; color:var(--primary); letter-spacing: -1px;">
+                    Sekbid 5
                 </h2>
             </div>
         </section>
-        <section class="section container" style="padding-bottom: 4rem;">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 3rem; justify-content: center;">
+        <section class="section container" style="padding-bottom: 2.5rem;">
+            <div class="members-grid">
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 5/Michelle F.JPG" alt="Anggota Sekbid 5"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 5</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Michelle Fransisca -
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Michelle Fransisca -
                             11.3</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Memperkuat solidaritas dan kepemimpinan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Memperkuat solidaritas dan kepemimpinan.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/michelleee_fransisca/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 5/Javelyn.jpeg" alt="Anggota Sekbid 5"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 5</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Javelyn Liauw - 10.1
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Javelyn Liauw - 10.1
                         </h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Memperkuat solidaritas dan kepemimpinan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Memperkuat solidaritas dan kepemimpinan.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/javelynliauw/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 5/Joanna.JPG" alt="Anggota Sekbid 5"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 5</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Joanna Lukiman - 10.1
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Joanna Lukiman - 10.1
                         </h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Memperkuat solidaritas dan kepemimpinan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Memperkuat solidaritas dan kepemimpinan.</p>
+                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Sekbid 6 Section -->
-        <section class="section" style="text-align:center; padding: 4rem 5% 2rem;">
+        <section class="section" style="text-align:center; padding: 2.5rem 5% 0.2rem;">
             <div class="container animate-fade-up">
                 <span
                     style="color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Seksi
                     Bidang 6</span>
                 <h2 class="font-heading"
-                    style="font-size: 3rem; margin-top:0.5rem; color:var(--primary); letter-spacing: -1px;">Sekbid 6
+                    style="font-size: 3rem; margin-top:0.5rem; margin-bottom: 0.5rem; color:var(--primary); letter-spacing: -1px;">
+                    Sekbid 6
                 </h2>
             </div>
         </section>
-        <section class="section container" style="padding-bottom: 4rem;">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 3rem; justify-content: center;">
+        <section class="section container" style="padding-bottom: 2.5rem;">
+            <div class="members-grid">
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 6/Darlene.jpeg" alt="Anggota Sekbid 6"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 6</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Darlenne Dorea
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Darlenne Dorea
                             Gunawan - 10.3</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Meningkatkan kemampuan wirausaha dan inovasi."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Meningkatkan kemampuan wirausaha dan inovasi.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/delme_t/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 6/Kirana.JPG" alt="Anggota Sekbid 6"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 6</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Kirana Azelia - 10.3
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Kirana Azelia - 10.3
                         </h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Meningkatkan kemampuan wirausaha dan inovasi."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Meningkatkan kemampuan wirausaha dan inovasi.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/celiakiranaazelia/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 6/Winston.JPG" alt="Anggota Sekbid 6"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 6</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Winston Lo Isaiah -
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Winston Lo Isaiah -
                             10.3</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Meningkatkan kemampuan wirausaha dan inovasi."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Meningkatkan kemampuan wirausaha dan inovasi.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/winst_is/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Sekbid 7 Section -->
-        <section class="section" style="text-align:center; padding: 4rem 5% 2rem;">
+        <section class="section" style="text-align:center; padding: 2.5rem 5% 0.2rem;">
             <div class="container animate-fade-up">
                 <span
                     style="color: var(--accent-orange); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Seksi
                     Bidang 7</span>
                 <h2 class="font-heading"
-                    style="font-size: 3rem; margin-top:0.5rem; color:var(--primary); letter-spacing: -1px;">Sekbid 7
+                    style="font-size: 3rem; margin-top:0.5rem; margin-bottom: 0.5rem; color:var(--primary); letter-spacing: -1px;">
+                    Sekbid 7
                 </h2>
             </div>
         </section>
-        <section class="section container" style="padding-bottom: 8rem;">
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 3rem; justify-content: center;">
+        <section class="section container" style="padding-bottom: 5rem;">
+            <div class="members-grid">
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 7/feliceee.jpg" alt="Anggota Sekbid 7"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 7</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Felice Ham - 11.3
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Felice Ham - 11.3
                         </h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Menjaga kesehatan jasmani dan melestarikan lingkungan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Menjaga kesehatan jasmani dan melestarikan lingkungan.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/_felham/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 7/Abigail.JPG" alt="Anggota Sekbid 7"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 7</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Abigail Elizabeth
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Abigail Elizabeth
                             Budiman - 10.1</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Menjaga kesehatan jasmani dan melestarikan lingkungan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Menjaga kesehatan jasmani dan melestarikan lingkungan.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/abi.elizab/"><i
+                                    class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
                     <div class="member-img-wrap"><img src="assets/Sekbid 7/Dawson.JPG" alt="Anggota Sekbid 7"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 7</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.8rem;">Dawson Althea Wuson -
+                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Dawson Althea Wuson -
                             10.1</h3>
                         <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">
-                            "Menjaga kesehatan jasmani dan melestarikan lingkungan."</p>
-                        <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i
-                                    class="fa-brands fa-linkedin"></i></a></div>
+                            Menjaga kesehatan jasmani dan melestarikan lingkungan.</p>
+                        <div class="social-row"><a href="https://www.instagram.com/wusonwawa/" <i
+                                class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -562,7 +607,7 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <h2>OSIS<span>smak</span>IPTO</h2>
+                <h2>OSIS<span>SMAK</span>IPTO</h2>
                 <p>Membentuk pemimpin masa depan yang melayani dengan ketulusan dan berintegritas tinggi berdasarkan
                     iman Kristiani.</p>
                 <div class="social-links">
@@ -577,7 +622,7 @@
                     <li><a href="index.html">Homepage</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="anggota.html">Anggota</a></li>
-                    <li><a href="komunitas.html">Komunitas</a></li>
+                    <li></li>
                     <li><a href="acara.html">Acara</a></li>
                 </ul>
             </div>

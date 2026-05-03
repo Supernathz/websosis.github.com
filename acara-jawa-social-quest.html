@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSIS SMAK IPTO | JAWA's Social Quest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .club-page{max-width:800px;margin:0 auto;padding:3rem 1.5rem 6rem}
+        .club-page .club-title{text-align:center;font-size:3.5rem;font-weight:800;color:var(--text-main);margin-bottom:1rem;letter-spacing:-1px}
+        .club-page .club-subtitle{text-align:center;font-size:1.15rem;color:var(--text-muted);max-width:600px;margin:0 auto 2.5rem;line-height:1.7;position:relative;padding-top:1.5rem}
+        .club-page .club-subtitle::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:3px;background:var(--accent-cyan);border-radius:3px}
+        .club-hero-image{width:100%;border-radius:24px;overflow:hidden;margin-bottom:4rem;box-shadow:var(--shadow-xl)}
+        .club-hero-image img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+        .club-section{margin-bottom:4rem}
+        .club-section h2{font-size:2rem;font-weight:800;color:var(--text-main);margin-bottom:1.5rem;text-align:center}
+        .club-section p{font-size:1.1rem;color:var(--text-muted);line-height:1.8;text-align:center}
+        .club-section .club-image{width:100%;border-radius:20px;overflow:hidden;margin:2rem 0;box-shadow:var(--shadow-md)}
+        .club-section .club-image img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+        .club-cta{background:linear-gradient(135deg,#e57b25 0%,#9b59b6 50%,var(--primary) 100%);border-radius:24px;padding:3.5rem 2.5rem;text-align:center;color:white;margin-top:4rem}
+        .club-cta h3{font-size:1.8rem;font-weight:700;color:white;margin-bottom:1.5rem;line-height:1.4}
+        .club-cta .cta-btn{display:inline-flex;align-items:center;gap:.75rem;background:white;color:var(--primary);padding:.9rem 2rem;border-radius:50px;font-weight:700;font-size:1.05rem;transition:all .3s ease;box-shadow:0 4px 15px rgba(0,0,0,.15)}
+        .club-cta .cta-btn:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.25)}
+        .club-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:4rem}
+        .club-nav a{display:inline-flex;align-items:center;gap:.5rem;background:var(--primary);color:white;padding:.9rem 2rem;border-radius:50px;font-weight:600;transition:all .3s ease}
+        .club-nav a:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(44,76,126,.3)}
+
+        /* Event detail info cards */
+        .event-info-bar {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            background: white;
+            border-radius: 24px;
+            box-shadow: var(--shadow-xl);
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+        }
+        .event-info-item {
+            text-align: center;
+        }
+        .event-info-item i {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+        .event-info-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .event-info-item p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Rundown timeline */
+        .rundown-item {
+            display: flex;
+            background: white;
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            box-shadow: var(--shadow-md);
+            align-items: center;
+            margin-bottom: 1.2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .rundown-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        .rundown-time {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.4rem;
+            min-width: 110px;
+        }
+        .rundown-divider {
+            width: 2px;
+            height: 50px;
+            background: var(--border-color);
+            margin: 0 2rem;
+        }
+        .rundown-title {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+        }
+        .rundown-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Documentation gallery */
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .doc-item {
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .doc-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+        .doc-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .doc-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media(max-width:768px){
+            .club-page .club-title{font-size:2.5rem}
+            .club-page{padding:2rem 1rem 4rem}
+            .club-nav{flex-direction:column}
+            .club-nav a{justify-content:center}
+            .rundown-item{flex-direction:column;text-align:center}
+            .rundown-divider{width:50px;height:2px;margin:1rem 0}
+            .event-info-bar{flex-direction:column;align-items:center}
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand" style="display:flex; align-items:center; text-decoration: none;">
+                <img src="assets/1000105640.png" alt="Logo OSIS IPTO" style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Homepage</a></li>
+                <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+                <li><a href="anggota.html" class="nav-link">Anggota</a></li>
+                <li class="dropdown">
+                    <a href="komunitas.html" class="nav-link">Komunitas <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="komunitas-animation.html">Animation Community</a>
+                        <a href="komunitas-revival.html">Community of Revival</a>
+                        <a href="komunitas-podcast.html">Podcast Community</a>
+                        <a href="komunitas-pmr.html">PMR Community</a>
+                        <a href="komunitas-theatre.html">Theatre Community</a>
+                        <a href="komunitas-photography.html">Photography Community</a>
+                        <a href="komunitas-emagazine.html">E-Magazine Community</a>
+                        <a href="komunitas-cooking.html">Cooking Community</a>
+                        <a href="komunitas-mural.html">Mural Community</a>
+                        <a href="komunitas-dance.html">Dance Community</a>
+                        <a href="komunitas-paskibra.html">Paskibra Community</a>
+                        <a href="komunitas-music.html">Music Community</a>
+                        <a href="komunitas-tech.html">Tech Community</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="acara.html" class="nav-link active">Acara <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="acara-paskah.html">Acara Paskah</a>
+                        <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
+                    </div>
+                </li>
+            </ul>
+            <a href="contactus.html" class="btn-contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <main style="padding-top: var(--nav-height);">
+        <div class="club-page">
+            <!-- Title -->
+            <h1 class="club-title animate-fade-up">JAWA's Social Quest</h1>
+            <p class="club-subtitle animate-fade-up delay-1">Kegiatan Sosial yang Mengajak Siswa/i untuk Terjun Langsung ke Masyarakat, Membangun Empati dan Kepedulian</p>
+
+            <!-- Hero Image -->
+            <div class="club-hero-image animate-fade-up delay-2">
+                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200&q=80" alt="JAWA's Social Quest">
+            </div>
+
+            <!-- Event Info Bar -->
+            <div class="event-info-bar animate-fade-up">
+                <div class="event-info-item">
+                    <i class="fa-regular fa-calendar-check" style="color: var(--accent-orange);"></i>
+                    <h4>Tanggal</h4>
+                    <p>2026</p>
+                </div>
+                <div class="event-info-item">
+                    <i class="fa-regular fa-clock" style="color: var(--accent-cyan);"></i>
+                    <h4>Waktu</h4>
+                    <p>07:00 - 15:00 WIB</p>
+                </div>
+                <div class="event-info-item">
+                    <i class="fa-solid fa-map-location-dot" style="color: var(--primary);"></i>
+                    <h4>Tempat</h4>
+                    <p>Panti Asuhan & Sekitar Sekolah</p>
+                </div>
+                <div class="event-info-item">
+                    <i class="fa-solid fa-users" style="color: var(--accent-yellow);"></i>
+                    <h4>Peserta</h4>
+                    <p>Seluruh Siswa/i</p>
+                </div>
+            </div>
+
+            <!-- What is JAWA's Social Quest -->
+            <div class="club-section animate-fade-up">
+                <h2>APA ITU JAWA'S SOCIAL QUEST?</h2>
+                <p>JAWA's Social Quest adalah program kegiatan sosial yang diselenggarakan oleh OSIS SMAK IPTO melalui Seksi Bidang JAWA (Jaringan Warga). Kegiatan ini bertujuan untuk menumbuhkan rasa empati, kepedulian sosial, dan jiwa pelayanan di kalangan siswa/i. Melalui Social Quest, para peserta diajak untuk terjun langsung ke masyarakat, berinteraksi dengan komunitas sekitar, dan memberikan kontribusi nyata bagi mereka yang membutuhkan.</p>
+            </div>
+
+            <!-- Tujuan Kegiatan -->
+            <div class="club-section animate-fade-up">
+                <h2>TUJUAN KEGIATAN</h2>
+                <div class="club-image">
+                    <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1200&q=80" alt="Social Quest Mission">
+                </div>
+                <p>JAWA's Social Quest dirancang untuk membentuk karakter siswa/i yang peduli terhadap sesama dan lingkungan. Kegiatan ini mengajak peserta untuk keluar dari zona nyaman, memahami realitas kehidupan masyarakat sekitar, dan mengembangkan soft skills seperti kepemimpinan, kerja tim, komunikasi, serta problem-solving melalui pengalaman langsung di lapangan.</p>
+            </div>
+
+            <!-- Rangkaian Acara -->
+            <div class="club-section animate-fade-up">
+                <h2>RANGKAIAN ACARA</h2>
+                <div class="club-image">
+                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1200&q=80" alt="Social Quest Activities">
+                </div>
+                <p>Social Quest terdiri dari berbagai rangkaian kegiatan yang dirancang untuk memberikan pengalaman holistik kepada peserta. Mulai dari kunjungan ke panti asuhan, bakti sosial di komunitas sekitar, penggalangan dana, hingga workshop bersama masyarakat. Setiap kegiatan dirancang agar peserta tidak hanya memberikan bantuan materi, tetapi juga membangun hubungan yang bermakna dengan masyarakat.</p>
+            </div>
+
+            <!-- Dampak -->
+            <div class="club-section animate-fade-up">
+                <h2>DAMPAK & REFLEKSI</h2>
+                <p>JAWA's Social Quest telah memberikan dampak positif yang signifikan, baik bagi masyarakat penerima manfaat maupun bagi siswa/i yang berpartisipasi. Para peserta tidak hanya belajar tentang kepedulian sosial, tetapi juga mengalami transformasi pribadi — menjadi lebih bersyukur, lebih peduli, dan lebih siap untuk menjadi pemimpin yang melayani di masa depan. Setiap tahun, Social Quest menjadi salah satu kegiatan yang paling berkesan dan dinantikan oleh seluruh warga SMAK IPTO.</p>
+            </div>
+
+            <!-- Dokumentasi -->
+            <div class="club-section animate-fade-up">
+                <h2>DOKUMENTASI</h2>
+                <div class="doc-grid">
+                    <div class="doc-item">
+                        <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=600" alt="Dokumentasi 1">
+                    </div>
+                    <div class="doc-item">
+                        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=600" alt="Dokumentasi 2">
+                    </div>
+                    <div class="doc-item">
+                        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=600" alt="Dokumentasi 3">
+                    </div>
+                    <div class="doc-item">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600" alt="Dokumentasi 4">
+                    </div>
+                    <div class="doc-item">
+                        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=600" alt="Dokumentasi 5">
+                    </div>
+                    <div class="doc-item">
+                        <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=600" alt="Dokumentasi 6">
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="club-cta animate-fade-up">
+                <h3>Cari Tahu Informasi Terkini Mengenai SMAK IPTO di Instagram Kami</h3>
+                <a href="#" class="cta-btn"><i class="fa-brands fa-instagram" style="font-size: 1.3rem;"></i> @osissmakipto</a>
+            </div>
+
+            <!-- Navigation -->
+            <div class="club-nav animate-fade-up">
+                <a href="acara.html"><i class="fa-solid fa-arrow-left"></i> Semua Kegiatan</a>
+                <a href="acara-paskah.html">Paskah 2026 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>OSIS<span>SMAK</span>IPTO</h2>
+                <p>Membentuk pemimpin masa depan yang melayani dengan ketulusan dan berintegritas tinggi berdasarkan iman Kristiani.</p>
+                <div class="social-links"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
+            </div>
+            <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="anggota.html">Anggota</a></li><li></li><li><a href="acara.html">Acara</a></li></ul></div>
+            <div class="footer-links"><h4>Contact Us</h4><ul><li><a href="#"><i class="fa-solid fa-location-dot" style="margin-right:10px;"></i> Jl. Macan No.21, Jakarta Barat</a></li><li><a href="#"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i> osis@smakipto.sch.id</a></li><li><a href="#"><i class="fa-brands fa-whatsapp" style="margin-right:10px;"></i> +62 812 3456 7890</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 OSIS SMAK IPEKA Tomang. All rights reserved.</p></div>
+    </footer>
+</body>
+</html>
