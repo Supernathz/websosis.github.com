@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +8,254 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .club-page{max-width:800px;margin:0 auto;padding:3rem 1.5rem 6rem}.club-page .club-title{text-align:center;font-size:3.5rem;font-weight:800;color:var(--text-main);margin-bottom:1rem;letter-spacing:-1px}.club-page .club-subtitle{text-align:center;font-size:1.15rem;color:var(--text-muted);max-width:600px;margin:0 auto 2.5rem;line-height:1.7;position:relative;padding-top:1.5rem}.club-page .club-subtitle::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:3px;background:var(--accent-cyan);border-radius:3px}.club-hero-image{width:100%;border-radius:24px;overflow:hidden;margin-bottom:4rem;box-shadow:var(--shadow-xl)}.club-hero-image img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}.club-section{margin-bottom:4rem}.club-section h2{font-size:2rem;font-weight:800;color:var(--text-main);margin-bottom:1.5rem;text-align:center}.club-section p{font-size:1.1rem;color:var(--text-muted);line-height:1.8;text-align:center}.club-section .club-image{width:100%;border-radius:20px;overflow:hidden;margin:2rem 0;box-shadow:var(--shadow-md)}.club-section .club-image img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}.club-cta{background:linear-gradient(135deg,#e57b25 0%,#9b59b6 50%,var(--primary) 100%);border-radius:24px;padding:3.5rem 2.5rem;text-align:center;color:white;margin-top:4rem}.club-cta h3{font-size:1.8rem;font-weight:700;color:white;margin-bottom:1.5rem;line-height:1.4}.club-cta .cta-btn{display:inline-flex;align-items:center;gap:.75rem;background:white;color:var(--primary);padding:.9rem 2rem;border-radius:50px;font-weight:700;font-size:1.05rem;transition:all .3s ease;box-shadow:0 4px 15px rgba(0,0,0,.15)}.club-cta .cta-btn:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.25)}.club-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:4rem}.club-nav a{display:inline-flex;align-items:center;gap:.5rem;background:var(--primary);color:white;padding:.9rem 2rem;border-radius:50px;font-weight:600;transition:all .3s ease}.club-nav a:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(44,76,126,.3)}@media(max-width:768px){.club-page .club-title{font-size:2.5rem}.club-page{padding:2rem 1rem 4rem}.club-nav{flex-direction:column}.club-nav a{justify-content:center}}
+        .club-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 6rem
+        }
+
+        .club-page .club-title {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            letter-spacing: -1px
+        }
+
+        .club-page .club-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+            position: relative;
+            padding-top: 1.5rem
+        }
+
+        .club-page .club-subtitle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent-cyan);
+            border-radius: 3px
+        }
+
+        .club-hero-image {
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            box-shadow: var(--shadow-xl)
+        }
+
+        .club-hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16/9;
+            object-fit: cover
+        }
+
+        .club-section {
+            margin-bottom: 4rem
+        }
+
+        .club-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            text-align: center
+        }
+
+        .club-section p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            text-align: center
+        }
+
+        .club-section .club-image {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-md)
+        }
+
+        .club-section .club-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16/9;
+            object-fit: cover
+        }
+
+        .club-cta {
+            background: linear-gradient(135deg, #e57b25 0%, #9b59b6 50%, var(--primary) 100%);
+            border-radius: 24px;
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            color: white;
+            margin-top: 4rem
+        }
+
+        .club-cta h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.4
+        }
+
+        .club-cta .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .75rem;
+            background: white;
+            color: var(--primary);
+            padding: .9rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all .3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .15)
+        }
+
+        .club-cta .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .25)
+        }
+
+        .club-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 4rem
+        }
+
+        .club-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: var(--primary);
+            color: white;
+            padding: .9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all .3s ease
+        }
+
+        .club-nav a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(44, 76, 126, .3)
+        }
+
+        @media(max-width:768px) {
+            .club-page .club-title {
+                font-size: 2.5rem
+            }
+
+            .club-page {
+                padding: 2rem 1rem 4rem
+            }
+
+            .club-nav {
+                flex-direction: column
+            }
+
+            .club-nav a {
+                justify-content: center
+            }
+        }
     </style>
 </head>
+
 <body>
-    <nav class="navbar"><div class="nav-container"><a href="index.html" class="brand" style="display:flex; align-items:center; text-decoration: none;"><img src="assets/1000105640.png" alt="Logo OSIS IPTO" style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;"></a><ul class="nav-links"><li><a href="index.html" class="nav-link">Homepage</a></li><li><a href="aboutus.html" class="nav-link">About Us</a></li><li><a href="anggota.html" class="nav-link">Anggota</a></li><li class="dropdown"><a href="komunitas.html" class="nav-link active">Komunitas <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a><div class="dropdown-content"><a href="komunitas-animation.html">Animation Community</a><a href="komunitas-revival.html">Community of Revival</a><a href="komunitas-podcast.html">Podcast Community</a><a href="komunitas-pmr.html">PMR Community</a><a href="komunitas-theatre.html">Theatre Community</a><a href="komunitas-photography.html">Photography Community</a><a href="komunitas-emagazine.html">E-Magazine Community</a><a href="komunitas-cooking.html">Cooking Community</a><a href="komunitas-mural.html">Mural Community</a><a href="komunitas-dance.html">Dance Community</a><a href="komunitas-paskibra.html">Paskibra Community</a><a href="komunitas-music.html">Music Community</a><a href="komunitas-tech.html">Tech Community</a></div></li><li class="dropdown"><a href="acara.html" class="nav-link ">Acara <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a><div class="dropdown-content"><a href="acara-paskah.html">Acara Paskah</a><a href="acara-jawa-social-quest.html">JAWA's Social Quest</a></div></li></ul><a href="contactus.html" class="btn-contact">Contact Us</a></div></nav>
+    <nav class="navbar">
+        <div class="nav-container"><a href="index.html" class="brand"
+                style="display:flex; align-items:center; text-decoration: none;"><img src="assets/1000105640.png"
+                    alt="Logo OSIS IPTO" style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;"></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Homepage</a></li>
+                <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+                <li><a href="anggota.html" class="nav-link">Anggota</a></li>
+                <li class="dropdown"><a href="komunitas.html" class="nav-link active">Komunitas <i
+                            class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content"><a href="komunitas-animation.html">Animation Community</a><a
+                            href="komunitas-revival.html">Community of Revival</a><a
+                            href="komunitas-podcast.html">Podcast Community</a><a href="komunitas-pmr.html">PMR
+                            Community</a><a href="komunitas-theatre.html">Theatre Community</a><a
+                            href="komunitas-photography.html">Photography Community</a><a
+                            href="komunitas-emagazine.html">E-Magazine Community</a><a
+                            href="komunitas-cooking.html">Cooking Community</a><a href="komunitas-mural.html">Mural
+                            Community</a><a href="komunitas-dance.html">Dance Community</a><a
+                            href="komunitas-paskibra.html">Paskibra Community</a><a href="komunitas-music.html">Music
+                            Community</a><a href="komunitas-tech.html">Tech Community</a></div>
+                </li>
+                <li class="dropdown"><a href="acara.html" class="nav-link ">Acara <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content"><a href="acara-paskah.html">Acara Paskah</a><a
+                            href="acara-jawa-social-quest.html">JAWA's Social Quest</a></div>
+                </li>
+            </ul><a href="contactus.html" class="btn-contact">Contact Us</a>
+        </div>
+    </nav>
 
     <main style="padding-top: var(--nav-height);">
         <div class="club-page">
-            <h1 class="club-title animate-fade-up">PMR Community</h1>
-            <p class="club-subtitle animate-fade-up delay-1">PMR Community, Palang Merah Remaja yang Melayani dan Peduli terhadap Kesehatan Warga Sekolah</p>
+            <h1 class="club-title animate-fade-up">PMR Community(UNFINISHED)</h1>
+            <p class="club-subtitle animate-fade-up delay-1">PMR Community, Palang Merah Remaja yang Melayani dan Peduli
+                terhadap Kesehatan Warga Sekolah</p>
 
             <div class="club-hero-image animate-fade-up delay-2">
-                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&q=80" alt="PMR Community SMAK IPTO">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&q=80"
+                    alt="PMR Community SMAK IPTO">
             </div>
 
             <div class="club-section animate-fade-up">
                 <h2>WHAT IS PMR</h2>
-                <p>PMR Community adalah komunitas Palang Merah Remaja SMAK IPTO yang berfokus pada pelayanan kesehatan, pertolongan pertama, dan kepedulian sosial. Anggota PMR dilatih untuk siap siaga menghadapi situasi darurat dan memberikan pertolongan pertama kepada warga sekolah.</p>
+                <p>PMR Community adalah komunitas Palang Merah Remaja SMAK IPTO yang berfokus pada pelayanan kesehatan,
+                    pertolongan pertama, dan kepedulian sosial. Anggota PMR dilatih untuk siap siaga menghadapi situasi
+                    darurat dan memberikan pertolongan pertama kepada warga sekolah.</p>
             </div>
 
             <div class="club-section animate-fade-up">
                 <h2>WEEKLY PRACTICE</h2>
-                <div class="club-image"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80" alt="PMR Community Practice"></div>
-                <p>Setiap minggu, anggota PMR berlatih teknik pertolongan pertama (P3K), CPR, dan penanganan keadaan darurat. Sesi latihan juga mencakup edukasi kesehatan, donor darah, dan simulasi penanganan bencana.</p>
+                <div class="club-image"><img
+                        src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80"
+                        alt="PMR Community Practice"></div>
+                <p>Setiap minggu, anggota PMR berlatih teknik pertolongan pertama (P3K), CPR, dan penanganan keadaan
+                    darurat. Sesi latihan juga mencakup edukasi kesehatan, donor darah, dan simulasi penanganan bencana.
+                </p>
             </div>
 
             <div class="club-section animate-fade-up">
                 <h2>KEGIATAN & PELAYANAN</h2>
-                <div class="club-image"><img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&q=80" alt="PMR Community Achievement"></div>
-                <p>PMR aktif dalam menjaga kesehatan warga sekolah melalui pos kesehatan, kampanye hidup sehat, dan kerja sama dengan Palang Merah Indonesia. Anggota PMR juga berpartisipasi dalam lomba PMR tingkat kota dan provinsi.</p>
+                <div class="club-image"><img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&q=80"
+                        alt="PMR Community Achievement"></div>
+                <p>PMR aktif dalam menjaga kesehatan warga sekolah melalui pos kesehatan, kampanye hidup sehat, dan
+                    kerja sama dengan Palang Merah Indonesia. Anggota PMR juga berpartisipasi dalam lomba PMR tingkat
+                    kota dan provinsi.</p>
             </div>
 
             <div class="club-section animate-fade-up">
                 <h2>DAMPAK</h2>
-                <p>PMR Community telah menjadi garda terdepan dalam menjaga kesehatan dan keselamatan warga SMAK IPTO. Kehadiran anggota PMR di setiap kegiatan sekolah memberikan rasa aman dan nyaman bagi seluruh siswa dan guru.</p>
+                <p>PMR Community telah menjadi garda terdepan dalam menjaga kesehatan dan keselamatan warga SMAK IPTO.
+                    Kehadiran anggota PMR di setiap kegiatan sekolah memberikan rasa aman dan nyaman bagi seluruh siswa
+                    dan guru.</p>
             </div>
 
             <div class="club-cta animate-fade-up">
                 <h3>Cari Tahu Informasi Terkini Mengenai SMAK IPTO di Instagram Kami</h3>
-                <a href="#" class="cta-btn"><i class="fa-brands fa-instagram" style="font-size: 1.3rem;"></i> @osissmakipto</a>
+                <a href="#" class="cta-btn"><i class="fa-brands fa-instagram" style="font-size: 1.3rem;"></i>
+                    @osissmakipto</a>
             </div>
 
             <div class="club-nav animate-fade-up">
@@ -56,6 +265,44 @@
         </div>
     </main>
 
-    <footer><div class="footer-grid"><div class="footer-brand"><h2>OSIS<span>SMAK</span>IPTO</h2><p>Membentuk pemimpin masa depan yang melayani dengan ketulusan dan berintegritas tinggi berdasarkan iman Kristiani.</p><div class="social-links"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div><div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="aboutus.html">About Us</a></li><li><a href="anggota.html">Anggota</a></li><li></li><li><a href="acara.html">Acara</a></li></ul></div><div class="footer-links"><h4>Contact Us</h4><ul><li><a href="#"><i class="fa-solid fa-location-dot" style="margin-right:10px;"></i> Jl. Macan No.21, Jakarta Barat</a></li><li><a href="#"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i> osis@smakipto.sch.id</a></li><li><a href="#"><i class="fa-brands fa-whatsapp" style="margin-right:10px;"></i> +62 812 3456 7890</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 OSIS SMAK IPEKA Tomang. All rights reserved.</p></div></footer>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>OSIS<span>SMAK</span>IPTO</h2>
+                <p>Membentuk pemimpin masa depan yang melayani dengan ketulusan dan berintegritas tinggi berdasarkan
+                    iman Kristiani.</p>
+                <div class="social-links"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i
+                            class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="anggota.html">Anggota</a></li>
+                    <li></li>
+                    <li><a href="acara.html">Acara</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-location-dot" style="margin-right:10px;"></i> Jl. Macan No.21,
+                            Jakarta Barat</a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i>
+                            osis@smakipto.sch.id</a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp" style="margin-right:10px;"></i> +62 812 3456
+                            7890</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 OSIS SMAK IPEKA Tomang. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="mobile-nav.js"></script>
 </body>
+
 </html>

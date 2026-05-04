@@ -128,12 +128,12 @@
             font-weight: 700;
             font-size: 1.05rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
         .club-cta .cta-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
         }
 
         /* Navigation buttons */
@@ -158,19 +158,22 @@
 
         .club-nav a:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(44,76,126,0.3);
+            box-shadow: 0 8px 20px rgba(44, 76, 126, 0.3);
         }
 
         @media (max-width: 768px) {
             .club-page .club-title {
                 font-size: 2.5rem;
             }
+
             .club-page {
                 padding: 2rem 1rem 4rem;
             }
+
             .club-nav {
                 flex-direction: column;
             }
+
             .club-nav a {
                 justify-content: center;
             }
@@ -183,7 +186,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="brand" style="display:flex; align-items:center; text-decoration: none;">
-                <img src="assets/1000105640.png" alt="Logo OSIS IPTO" style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;">
+                <img src="assets/1000105640.png" alt="Logo OSIS IPTO"
+                    style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Homepage</a></li>
@@ -191,7 +195,8 @@
                 <li><a href="anggota.html" class="nav-link">Anggota</a></li>
 
                 <li class="dropdown">
-                    <a href="komunitas.html" class="nav-link active">Komunitas <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    <a href="komunitas.html" class="nav-link active">Komunitas <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.8em; margin-left: 5px;"></i></a>
                     <div class="dropdown-content">
                         <a href="komunitas-animation.html">Animation Community</a>
                         <a href="komunitas-revival.html">Community of Revival</a>
@@ -209,7 +214,8 @@
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="acara.html" class="nav-link">Acara <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
+                    <a href="acara.html" class="nav-link">Acara <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.8em; margin-left: 5px;"></i></a>
                     <div class="dropdown-content">
                         <a href="acara-paskah.html">Acara Paskah</a>
                         <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
@@ -217,49 +223,101 @@
                 </li>
             </ul>
             <a href="contactus.html" class="btn-contact">Contact Us</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html" class="mobile-nav-link">Homepage</a>
+        <a href="aboutus.html" class="mobile-nav-link">About Us</a>
+        <a href="anggota.html" class="mobile-nav-link">Anggota</a>
+        <a href="komunitas.html" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'komunitas-dd')">Komunitas <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="mobile-dropdown" id="komunitas-dd">
+            <a href="komunitas-animation.html">Animation Community</a>
+            <a href="komunitas-revival.html">Community of Revival</a>
+            <a href="komunitas-podcast.html">Podcast Community</a>
+            <a href="komunitas-pmr.html">PMR Community</a>
+            <a href="komunitas-theatre.html">Theatre Community</a>
+            <a href="komunitas-photography.html">Photography Community</a>
+            <a href="komunitas-emagazine.html">E-Magazine Community</a>
+            <a href="komunitas-cooking.html">Cooking Community</a>
+            <a href="komunitas-mural.html">Mural Community</a>
+            <a href="komunitas-dance.html">Dance Community</a>
+            <a href="komunitas-paskibra.html">Paskibra Community</a>
+            <a href="komunitas-music.html">Music Community</a>
+            <a href="komunitas-tech.html">Tech Community</a>
+        </div>
+        <a href="acara.html" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'acara-dd')">Acara <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="mobile-dropdown" id="acara-dd">
+            <a href="acara-paskah.html">Acara Paskah</a>
+            <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
+        </div>
+        <a href="contactus.html" class="mobile-contact-btn"><i class="fa-solid fa-envelope"></i> Contact Us</a>
     </nav>
 
     <!-- Main Content -->
     <main style="padding-top: var(--nav-height);">
         <div class="club-page">
             <!-- Title -->
-            <h1 class="club-title animate-fade-up">Tech Community</h1>
-            <p class="club-subtitle animate-fade-up delay-1">Tech Community, Wadah Inovasi Teknologi dan Pemrograman bagi Siswa/i SMAK IPTO</p>
+            <h1 class="club-title animate-fade-up">Tech Community(UNFINISHED)</h1>
+            <p class="club-subtitle animate-fade-up delay-1">Tech Community, Wadah Inovasi Teknologi dan Pemrograman
+                bagi Siswa/i SMAK IPTO</p>
 
             <!-- Hero Image -->
             <div class="club-hero-image animate-fade-up delay-2">
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80" alt="Tech Community SMAK IPTO">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80"
+                    alt="Tech Community SMAK IPTO">
             </div>
 
             <!-- What is TC -->
             <div class="club-section animate-fade-up">
                 <h2>WHAT IS TC</h2>
-                <p>Tech Community (TC) adalah komunitas siswa/i SMAK IPTO yang memiliki minat dan bakat di bidang teknologi informasi. Komunitas ini menjadi wadah bagi para anggotanya untuk mengeksplorasi dunia pemrograman, desain web, pengembangan aplikasi, dan inovasi digital. Melalui berbagai kegiatan dan proyek kolaboratif, TC membantu anggotanya untuk mengembangkan keterampilan teknis serta soft skills yang dibutuhkan di era digital.</p>
+                <p>Tech Community (TC) adalah komunitas siswa/i SMAK IPTO yang memiliki minat dan bakat di bidang
+                    teknologi informasi. Komunitas ini menjadi wadah bagi para anggotanya untuk mengeksplorasi dunia
+                    pemrograman, desain web, pengembangan aplikasi, dan inovasi digital. Melalui berbagai kegiatan dan
+                    proyek kolaboratif, TC membantu anggotanya untuk mengembangkan keterampilan teknis serta soft skills
+                    yang dibutuhkan di era digital.</p>
             </div>
 
             <!-- Weekly Practice -->
             <div class="club-section animate-fade-up">
                 <h2>WEEKLY PRACTICE</h2>
                 <div class="club-image">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80" alt="Tech Community Practice">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80"
+                        alt="Tech Community Practice">
                 </div>
-                <p>Setiap minggu, anggota Tech Community berkumpul untuk belajar dan berlatih bersama. Sesi latihan meliputi pembelajaran bahasa pemrograman seperti Python, JavaScript, dan HTML/CSS, serta workshop tentang teknologi terkini seperti AI, IoT, dan Cloud Computing. Melalui latihan rutin ini, anggota TC terus mengasah kemampuan coding dan problem-solving mereka.</p>
+                <p>Setiap minggu, anggota Tech Community berkumpul untuk belajar dan berlatih bersama. Sesi latihan
+                    meliputi pembelajaran bahasa pemrograman seperti Python, JavaScript, dan HTML/CSS, serta workshop
+                    tentang teknologi terkini seperti AI, IoT, dan Cloud Computing. Melalui latihan rutin ini, anggota
+                    TC terus mengasah kemampuan coding dan problem-solving mereka.</p>
             </div>
 
             <!-- Achievements / Events -->
             <div class="club-section animate-fade-up">
                 <h2>KEGIATAN & PRESTASI</h2>
                 <div class="club-image">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80" alt="Tech Community Achievement">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80"
+                        alt="Tech Community Achievement">
                 </div>
-                <p>Tech Community secara aktif mengikuti berbagai kompetisi teknologi dan hackathon di tingkat nasional. Para anggota TC juga berkontribusi dalam pengembangan proyek digital sekolah, termasuk website dan aplikasi yang memudahkan kegiatan akademik. TC juga kerap mengadakan Tech Talk dan workshop internal untuk berbagi pengetahuan teknologi terbaru kepada seluruh warga sekolah.</p>
+                <p>Tech Community secara aktif mengikuti berbagai kompetisi teknologi dan hackathon di tingkat nasional.
+                    Para anggota TC juga berkontribusi dalam pengembangan proyek digital sekolah, termasuk website dan
+                    aplikasi yang memudahkan kegiatan akademik. TC juga kerap mengadakan Tech Talk dan workshop internal
+                    untuk berbagi pengetahuan teknologi terbaru kepada seluruh warga sekolah.</p>
             </div>
 
             <!-- Performance / Showcase -->
             <div class="club-section animate-fade-up">
                 <h2>PROJECT SHOWCASE</h2>
-                <p>Setiap tahunnya, Tech Community mengadakan showcase project dimana para anggota mempresentasikan hasil karya mereka. Mulai dari website interaktif, game sederhana, aplikasi mobile, hingga proyek robotika. Event tahunan ini menjadi ajang bagi seluruh siswa/i SMAK IPTO untuk melihat inovasi dan kreativitas yang dihasilkan oleh komunitas teknologi kebanggaan sekolah.</p>
+                <p>Setiap tahunnya, Tech Community mengadakan showcase project dimana para anggota mempresentasikan
+                    hasil karya mereka. Mulai dari website interaktif, game sederhana, aplikasi mobile, hingga proyek
+                    robotika. Event tahunan ini menjadi ajang bagi seluruh siswa/i SMAK IPTO untuk melihat inovasi dan
+                    kreativitas yang dihasilkan oleh komunitas teknologi kebanggaan sekolah.</p>
             </div>
 
             <!-- Instagram CTA -->
@@ -284,7 +342,8 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <h2>OSIS<span>SMAK</span>IPTO</h2>
-                <p>Membentuk pemimpin masa depan yang melayani dengan ketulusan dan berintegritas tinggi berdasarkan iman Kristiani.</p>
+                <p>Membentuk pemimpin masa depan yang melayani dengan ketulusan dan berintegritas tinggi berdasarkan
+                    iman Kristiani.</p>
                 <div class="social-links">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-tiktok"></i></a>
@@ -304,9 +363,12 @@
             <div class="footer-links">
                 <h4>Contact Us</h4>
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-location-dot" style="margin-right:10px;"></i> Jl. Macan No.21, Jakarta Barat</a></li>
-                    <li><a href="#"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i> osis@smakipto.sch.id</a></li>
-                    <li><a href="#"><i class="fa-brands fa-whatsapp" style="margin-right:10px;"></i> +62 812 3456 7890</a></li>
+                    <li><a href="#"><i class="fa-solid fa-location-dot" style="margin-right:10px;"></i> Jl. Macan No.21,
+                            Jakarta Barat</a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i>
+                            osis@smakipto.sch.id</a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp" style="margin-right:10px;"></i> +62 812 3456
+                            7890</a></li>
                 </ul>
             </div>
         </div>
@@ -314,5 +376,8 @@
             <p>&copy; 2026 OSIS SMAK IPEKA Tomang. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="mobile-nav.js"></script>
 </body>
+
 </html>

@@ -572,7 +572,185 @@ footer::before {
   font-size: 0.95rem;
 }
 
+/* ===== HAMBURGER MENU BUTTON ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1100;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--primary);
+  border-radius: 3px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ===== MOBILE OVERLAY ===== */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+}
+
+/* ===== MOBILE NAV DRAWER ===== */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: min(85vw, 380px);
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(255, 255, 255, 0.97);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  z-index: 1050;
+  flex-direction: column;
+  padding: calc(var(--nav-height) + 1rem) 1.5rem 2rem;
+  overflow-y: auto;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.active {
+  right: 0;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--accent-cyan);
+}
+
+.mobile-nav-link .fa-chevron-down {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+  color: var(--text-muted);
+}
+
+.mobile-nav-link.expanded .fa-chevron-down {
+  transform: rotate(180deg);
+  color: var(--accent-cyan);
+}
+
+.mobile-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 12px;
+  margin-bottom: 0.25rem;
+}
+
+.mobile-dropdown.open {
+  max-height: 800px;
+}
+
+.mobile-dropdown a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mobile-dropdown a:hover {
+  background: rgba(0, 158, 181, 0.08);
+  color: var(--accent-cyan);
+  padding-left: 1.5rem;
+}
+
+.mobile-nav .mobile-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 158, 181, 0.3);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.mobile-nav .mobile-contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 158, 181, 0.4);
+}
+
+/* ===== TABLET BREAKPOINT (991px) ===== */
 @media (max-width: 991px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-nav,
+  .mobile-overlay {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .btn-contact {
+    display: none !important;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -596,11 +774,287 @@ footer::before {
     gap: 3rem;
   }
 
-  .nav-links {
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-brand h2 {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 4rem 5%;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* About us page - inline grid fix */
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  /* Dropdown content on tablet */
+  .dropdown-content {
+    min-width: 300px;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== PHONE BREAKPOINT (768px) ===== */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 65px;
+  }
+
+  .brand img,
+  .brand [style*="height: 50px"] {
+    height: 40px !important;
+  }
+
+  .hero {
+    min-height: 85vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+  }
+
+  .hero-content p {
+    font-size: 1.05rem;
+  }
+
+  .btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section {
+    padding: 3rem 5%;
+  }
+
+  .section-title {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.75rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    border-radius: 16px;
+    padding: 2rem;
+  }
+
+  /* Footer responsive */
+  footer {
+    padding: 3rem 5% 1.5rem;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  .footer-grid {
+    gap: 2rem;
+  }
+
+  .footer-brand h2 {
+    font-size: 2rem;
+  }
+
+  .footer-links h4 {
+    font-size: 1.05rem;
+  }
+
+  /* Hero image area */
+  .hero-image {
     display: none;
   }
 
-  .btn-contact {
-    display: none;
+  /* Members grid on anggota page */
+  .members-grid {
+    gap: 1.2rem;
   }
+
+  .members-grid .member-card {
+    flex: 1 1 140px;
+    max-width: 100%;
+  }
+
+  /* Inline style overrides for common page patterns */
+  /* Hero headings that use inline font-size */
+  h1[style*="font-size: 4rem"],
+  h1[style*="font-size: 4.5rem"],
+  h1[style*="font-size: 5rem"] {
+    font-size: 2.2rem !important;
+  }
+
+  h2[style*="font-size: 3rem"],
+  h2[style*="font-size: 2.5rem"] {
+    font-size: 1.75rem !important;
+  }
+
+  h2[style*="font-size: 4rem"] {
+    font-size: 2.5rem !important;
+  }
+
+  /* Stats section numbers */
+  h2[style*="font-size: 4rem"][style*="color: var(--accent-yellow)"] {
+    font-size: 2.5rem !important;
+  }
+
+  /* Paskah hero */
+  section[style*="height: 60vh"] {
+    height: 45vh !important;
+    min-height: 350px !important;
+  }
+
+  /* Schedule items on Paskah page */
+  .hover-card[style*="display: flex"][style*="border-left: 6px"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+
+  .hover-card[style*="display: flex"][style*="border-left: 6px"] div[style*="width: 2px"] {
+    width: 100% !important;
+    height: 1px !important;
+    margin: 0 !important;
+  }
+
+  .hover-card[style*="display: flex"][style*="border-left: 6px"] div[style*="min-width: 120px"] {
+    min-width: auto !important;
+    font-size: 1.2rem !important;
+  }
+
+  /* Event details floating card */
+  div[style*="display: flex"][style*="justify-content: space-around"][style*="flex-wrap: wrap"] {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Kegiatan page grid */
+  .kegiatan-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Photo grid */
+  div[style*="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Komunitas page header */
+  h1[style*="font-size: 4.5rem"] {
+    font-size: 2.2rem !important;
+  }
+
+  /* Padding overrides */
+  section[style*="padding: 8rem 5% 4rem"] {
+    padding: 5rem 5% 2.5rem !important;
+  }
+
+  /* Contact page social icons row */
+  div[style*="display: flex"][style*="gap: 1rem"]:not(.btn-group):not(.social-links):not(.footer-grid) {
+    flex-wrap: wrap;
+  }
+}
+
+/* ===== SMALL PHONE BREAKPOINT (480px) ===== */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+
+  h1[style*="font-size: 4rem"],
+  h1[style*="font-size: 4.5rem"],
+  h1[style*="font-size: 5rem"] {
+    font-size: 1.8rem !important;
+  }
+
+  h2[style*="font-size: 3rem"],
+  h2[style*="font-size: 2.5rem"] {
+    font-size: 1.5rem !important;
+  }
+
+  h2[style*="font-size: 4rem"][style*="color: var(--accent-yellow)"] {
+    font-size: 2rem !important;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+  }
+
+  footer {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .members-grid .member-card {
+    flex: 1 1 100%;
+  }
+
+  /* CTA section padding */
+  div[style*="border-radius: 40px"][style*="padding: 4rem 2rem"] {
+    padding: 2.5rem 1.5rem !important;
+    border-radius: 24px !important;
+  }
+
+  /* Paskah floating card */
+  div[style*="border-radius: 24px"][style*="padding: 3rem"] {
+    padding: 1.5rem !important;
+  }
+
+  /* Club page specific */
+  .club-page .club-title {
+    font-size: 2rem !important;
+  }
+
+  .club-cta {
+    padding: 2.5rem 1.5rem !important;
+    border-radius: 16px !important;
+  }
+
+  .club-cta h3 {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* ===== PREVENT BODY SCROLL WHEN MENU OPEN ===== */
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
