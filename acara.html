@@ -146,7 +146,7 @@
                 <li class="dropdown">
                     <a href="komunitas.html" class="nav-link">Komunitas <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
                     <div class="dropdown-content">
-                        <a href="komunitas-animation.html">Animation Community</a>
+
                         <a href="komunitas-revival.html">Community of Revival</a>
                         <a href="komunitas-podcast.html">Podcast Community</a>
                         <a href="komunitas-pmr.html">PMR Community</a>
@@ -164,7 +164,7 @@
                 <li class="dropdown">
                     <a href="acara.html" class="nav-link active">Acara <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
                     <div class="dropdown-content">
-                        <a href="acara-paskah.html">Acara Paskah</a>
+
                         <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
                     </div>
                 </li>
@@ -186,7 +186,7 @@
         <a href="anggota.html" class="mobile-nav-link">Anggota</a>
         <a href="komunitas.html" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'komunitas-dd')">Komunitas <i class="fa-solid fa-chevron-down"></i></a>
         <div class="mobile-dropdown" id="komunitas-dd">
-            <a href="komunitas-animation.html">Animation Community</a>
+
             <a href="komunitas-revival.html">Community of Revival</a>
             <a href="komunitas-podcast.html">Podcast Community</a>
             <a href="komunitas-pmr.html">PMR Community</a>
@@ -202,7 +202,7 @@
         </div>
         <a href="acara.html" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'acara-dd')">Acara <i class="fa-solid fa-chevron-down"></i></a>
         <div class="mobile-dropdown" id="acara-dd">
-            <a href="acara-paskah.html">Acara Paskah</a>
+
             <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
         </div>
         <a href="contactus.html" class="mobile-contact-btn"><i class="fa-solid fa-envelope"></i> Contact Us</a>
@@ -221,19 +221,6 @@
         <!-- Activity Cards -->
         <section class="section container" style="padding-top: 4rem; padding-bottom: 8rem;">
             <div class="kegiatan-grid">
-                <!-- Paskah Card -->
-                <a href="acara-paskah.html" class="kegiatan-card animate-fade-up">
-                    <div class="kegiatan-card-img">
-                        <img src="https://images.unsplash.com/photo-1544427920-c49ccbc8e252?auto=format&fit=crop&w=800" alt="Paskah 2026">
-                        <span class="date-badge"><i class="fa-regular fa-calendar"></i> 3 April 2026</span>
-                        <span class="category-badge">Kerohanian</span>
-                    </div>
-                    <div class="kegiatan-card-body">
-                        <h3>Paskah 2026</h3>
-                        <p>Perayaan Paskah bersama seluruh keluarga besar SMAK IPTO dengan tema "Kebangkitan-Nya Membawa Pengharapan Baru".</p>
-                        <span class="read-more">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
 
                 <!-- JAWA's Social Quest Card -->
                 <a href="acara-jawa-social-quest.html" class="kegiatan-card animate-fade-up delay-1">
@@ -248,6 +235,28 @@
                         <span class="read-more">Lihat Detail <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
+            </div>
+        </section>
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <div class="section-title">
+                    <h2>Gallery Dokumentasi</h2>
+                    <p>Lihat keseruan kegiatan kami melalui lensa dokumentasi.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item animate-fade-up">
+                        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&q=80" alt="Gallery 1">
+                        <div class="gallery-overlay"><div class="gallery-info"><h4>Event Highlights</h4><p>Momen terbaik kegiatan</p></div></div>
+                    </div>
+                    <div class="gallery-item animate-fade-up delay-1">
+                        <img src="https://images.unsplash.com/photo-1523050853051-f750004c21ad?w=800&q=80" alt="Gallery 2">
+                        <div class="gallery-overlay"><div class="gallery-info"><h4>Collaboration</h4><p>Semangat kebersamaan</p></div></div>
+                    </div>
+                    <div class="gallery-item animate-fade-up delay-2">
+                        <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80" alt="Gallery 3">
+                        <div class="gallery-overlay"><div class="gallery-info"><h4>Final Results</h4><p>Hasil nyata dari kegiatan</p></div></div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -266,5 +275,6 @@
     </footer>
 
     <script src="mobile-nav.js"></script>
+    <script src="scroll-reveal.js"></script>
 </body>
 </html>

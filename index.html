@@ -27,7 +27,7 @@
                     <a href="komunitas.html" class="nav-link">Komunitas <i class="fa-solid fa-chevron-down"
                             style="font-size: 0.8em; margin-left: 5px;"></i></a>
                     <div class="dropdown-content">
-                        <a href="komunitas-animation.html">Animation Community</a>
+
                         <a href="komunitas-revival.html">Community of Revival</a>
                         <a href="komunitas-podcast.html">Podcast Community</a>
                         <a href="komunitas-pmr.html">PMR Community</a>
@@ -46,7 +46,7 @@
                     <a href="acara.html" class="nav-link">Acara <i class="fa-solid fa-chevron-down"
                             style="font-size: 0.8em; margin-left: 5px;"></i></a>
                     <div class="dropdown-content">
-                        <a href="acara-paskah.html">Acara Paskah</a>
+
                         <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
                     </div>
                 </li>
@@ -69,7 +69,7 @@
         <a href="komunitas.html" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'komunitas-dd')">Komunitas
             <i class="fa-solid fa-chevron-down"></i></a>
         <div class="mobile-dropdown" id="komunitas-dd">
-            <a href="komunitas-animation.html">Animation Community</a>
+
             <a href="komunitas-revival.html">Community of Revival</a>
             <a href="komunitas-podcast.html">Podcast Community</a>
             <a href="komunitas-pmr.html">PMR Community</a>
@@ -86,7 +86,7 @@
         <a href="acara.html" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'acara-dd')">Acara <i
                 class="fa-solid fa-chevron-down"></i></a>
         <div class="mobile-dropdown" id="acara-dd">
-            <a href="acara-paskah.html">Acara Paskah</a>
+
             <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
         </div>
         <a href="contactus.html" class="mobile-contact-btn"><i class="fa-solid fa-envelope"></i> Contact Us</a>
@@ -118,7 +118,7 @@
                         <div
                             style="width: 80%; height: 80%; background: linear-gradient(135deg, var(--primary), var(--accent-cyan)); border-radius: 40px; transform: rotate(5deg); box-shadow: var(--shadow-xl); overflow: hidden; position: relative; z-index: 2; display:flex; justify-content:center; align-items:center;">
                             <img src="assets/Dokumentasi/1000115376.jpg" alt="Students"
-                                style="width:100%; height:100%; object-fit: cover; opacity: 0.8; mix-blend-mode: luminosity;">
+                                style="width:100%; height:100%; object-fit: cover; opacity: 1;">
                             <div
                                 style="position: absolute; inset:0; background: linear-gradient(to top, rgba(44, 76, 126, 0.9), transparent);">
                             </div>
@@ -140,6 +140,29 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="scroll-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+        </div>
+
+        <!-- Tentang Kami Section -->
+        <section class="section tentang-section">
+            <div class="container tentang-grid">
+                <div class="tentang-content">
+                    <span class="tentang-label reveal-item">Tentang Kami</span>
+                    <h2 class="tentang-title reveal-item">OSIS SMAK IPEKA Tomang: Organisasi Siswa yang Berkomitmen pada
+                        <span class="tentang-accent">Pengembangan Karakter</span> dan Kepemimpinan</h2>
+                    <p class="tentang-desc reveal-item">OSIS SMAK IPEKA Tomang (IPTO) merupakan wadah resmi bagi seluruh
+                        siswa untuk bertumbuh dalam kepemimpinan, kreativitas, dan pelayanan. Kami berfokus pada
+                        pembentukan generasi muda yang berdampak nyata melalui program yang terstruktur, kolaboratif,
+                        dan berdasarkan iman Kristiani.</p>
+                </div>
+                <div class="tentang-logo reveal-item">
+                    <img src="assets/1000105640.png" alt="Logo OSIS SMAK IPTO" class="tentang-img-square">
                 </div>
             </div>
         </section>
@@ -179,46 +202,116 @@
             </div>
         </section>
 
-        <section class="section" style="padding-top: 0;">
-            <div class="container">
-                <div
-                    style="background: linear-gradient(135deg, var(--primary), var(--accent-cyan)); color: white; border-radius: 40px; padding: 4rem 2rem; box-shadow: var(--shadow-xl); position: relative; overflow: hidden;">
-                    <div
-                        style="position: absolute; top: -50%; left: -10%; width: 300px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 50%; filter: blur(30px);">
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <!-- Carousel Wrapper -->
+                <div class="gallery-carousel" id="galleryCarousel">
+                    <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel-track-outer">
+                        <div class="carousel-track" id="carouselTrack">
+                            <!-- Slide 1 -->
+                            <div class="gallery-slide">
+                                <img src="assets/Dokumentasi/1000115375.jpg" alt="Imlek 2026">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-info">
+                                        <h4>Imlek 2026</h4>
+                                        <p>Perayaan Tahun Baru Imlek</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="gallery-slide">
+                                <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80"
+                                    alt="Class Meeting">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-info">
+                                        <h4>Class Meeting</h4>
+                                        <p>Keseruan lomba antar kelas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="gallery-slide">
+                                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&q=80"
+                                    alt="Eco Vent">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-info">
+                                        <h4>Eco Vent</h4>
+                                        <p>Aksi peduli lingkungan sekolah</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="gallery-slide">
+                                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80"
+                                    alt="Baksos OSIS">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-info">
+                                        <h4>Baksos OSIS</h4>
+                                        <p>Berbagi kasih dengan sesama</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="gallery-slide">
+                                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80"
+                                    alt="Pensi SMAK IPTO">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-info">
+                                        <h4>Pensi SMAK IPTO</h4>
+                                        <p>Penampilan bakat siswa/i</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="gallery-slide">
+                                <img src="https://images.unsplash.com/photo-1524178232363-1fb28f74b573?w=800&q=80"
+                                    alt="Seminar Kepemimpinan">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-info">
+                                        <h4>Seminar Kepemimpinan</h4>
+                                        <p>Membangun karakter pemimpin</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 7 -->
+                            <div class="gallery-slide">
+                                <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?w=800&q=80"
+                                    alt="Retreat OSIS">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-info">
+                                        <h4>Retreat OSIS</h4>
+                                        <p>Mempererat hubungan pengurus</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 8 -->
+                            <div class="gallery-slide">
+                                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80"
+                                    alt="JAWA Social Quest">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-info">
+                                        <h4>JAWA's Social Quest</h4>
+                                        <p>Melayani masyarakat sekitar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        style="position: absolute; bottom: -50%; right: -10%; width: 300px; height: 300px; background: rgba(229,123,37,0.2); border-radius: 50%; filter: blur(30px);">
-                    </div>
-                    <div
-                        style="display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 3rem; position: relative; z-index: 2;">
-                        <div>
-                            <h2
-                                style="font-size: 4rem; color: var(--accent-yellow); margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                                20+</h2>
-                            <p style="font-size: 1.2rem; font-weight: 500;">Pengurus Aktif</p>
-                        </div>
-                        <div>
-                            <h2
-                                style="font-size: 4rem; color: var(--accent-yellow); margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                                10+</h2>
-                            <p style="font-size: 1.2rem; font-weight: 500;">Program Kerja</p>
-                        </div>
-                        <div>
-                            <h2
-                                style="font-size: 4rem; color: var(--accent-yellow); margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                                1K+</h2>
-                            <p style="font-size: 1.2rem; font-weight: 500;">Jangkauan Medsos</p>
-                        </div>
-                        <div>
-                            <h2
-                                style="font-size: 4rem; color: var(--accent-yellow); margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                                1</h2>
-                            <p style="font-size: 1.2rem; font-weight: 500;">Keluarga Besar</p>
-                        </div>
-                    </div>
+
+                    <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
+
+                <!-- Dot Indicators -->
+                <div class="carousel-dots" id="carouselDots"></div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer -->
@@ -263,6 +356,109 @@
     </footer>
 
     <script src="mobile-nav.js"></script>
+    <script src="scroll-reveal.js"></script>
+    <script>
+        // ===== NAVBAR SCROLL SHADOW =====
+        var navbar = document.querySelector('.navbar');
+        var scrollIndicator = document.getElementById('scrollIndicator');
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                requestAnimationFrame(function () {
+                    var y = window.scrollY;
+                    navbar.classList.toggle('scrolled', y > 60);
+                    if (scrollIndicator) scrollIndicator.classList.toggle('hidden', y > 100);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // ===== SCROLL ARROW CLICK =====
+        var scrollArrow = document.querySelector('.scroll-arrow');
+        if (scrollArrow) {
+            scrollArrow.addEventListener('click', function () {
+                var target = document.querySelector('.tentang-section');
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+
+        // ===== GALLERY CAROUSEL (step 1 image at a time) =====
+        (function () {
+            var track = document.getElementById('carouselTrack');
+            var dotsContainer = document.getElementById('carouselDots');
+            var prevBtn = document.getElementById('carouselPrev');
+            var nextBtn = document.getElementById('carouselNext');
+            if (!track) return;
+
+            var slides = Array.from(track.querySelectorAll('.gallery-slide'));
+            var total = slides.length;
+            var current = 0;
+            var autoTimer = null;
+            var AUTO_DELAY = 4000;
+
+            function visibleCount() {
+                if (window.innerWidth <= 540) return 1;
+                if (window.innerWidth <= 900) return 2;
+                return 3;
+            }
+
+            function buildDots() {
+                dotsContainer.innerHTML = '';
+                for (var i = 0; i < total; i++) {
+                    var d = document.createElement('button');
+                    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                    (function (idx) {
+                        d.addEventListener('click', function () { goTo(idx); startAuto(); });
+                    })(i);
+                    dotsContainer.appendChild(d);
+                }
+            }
+
+            function updateDots() {
+                var dots = dotsContainer.querySelectorAll('.carousel-dot');
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].classList.toggle('active', i === current);
+                }
+            }
+
+            function getSlideWidth() {
+                if (slides.length === 0) return 0;
+                var gap = parseFloat(getComputedStyle(track).gap) || 20;
+                return slides[0].offsetWidth + gap;
+            }
+
+            function goTo(index) {
+                var vis = visibleCount();
+                var maxIndex = Math.max(0, total - vis);
+                if (index < 0) { current = maxIndex; }
+                else if (index > maxIndex) { current = 0; }
+                else { current = index; }
+                track.style.transform = 'translateX(-' + (current * getSlideWidth()) + 'px)';
+                updateDots();
+            }
+
+            function startAuto() {
+                clearInterval(autoTimer);
+                autoTimer = setInterval(function () { goTo(current + 1); }, AUTO_DELAY);
+            }
+
+            buildDots();
+            startAuto();
+
+            nextBtn.addEventListener('click', function () { goTo(current + 1); startAuto(); });
+            prevBtn.addEventListener('click', function () { goTo(current - 1); startAuto(); });
+
+            track.parentElement.addEventListener('mouseenter', function () { clearInterval(autoTimer); });
+            track.parentElement.addEventListener('mouseleave', startAuto);
+
+            var resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () { goTo(current); }, 200);
+            });
+        })();
+    </script>
 </body>
 
 </html>
