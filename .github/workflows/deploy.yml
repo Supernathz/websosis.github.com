@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Ganti dengan nama branch utama Anda jika bukan 'main'
+      - main
 
 permissions:
   contents: write
@@ -17,9 +17,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Inject OpenAI API Key
+      - name: Generate config.js from Secret
         run: |
-          sed -i "s/REPLACE_WITH_OPENAI_API_KEY/${{ secrets.OPENAI_API_KEY }}/g" chatbot.js
+          echo "window.CHATBOT_API_KEY = '${{ secrets.OPENAI_API_KEY }}';" > config.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -32,3 +32,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+

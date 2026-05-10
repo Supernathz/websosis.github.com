@@ -49,10 +49,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const sendBtn = document.getElementById("chatbotSend");
     const typingIndicator = document.getElementById("typingIndicator");
 
-    // OpenAI Configuration
-    // JANGAN masukkan API Key langsung di sini untuk alasan keamanan.
-    // Gunakan environment variables atau backend proxy jika memungkinkan.
-    const OPENAI_API_KEY = "REPLACE_WITH_OPENAI_API_KEY";
+    // Load config.js dynamically to get the API key.
+    // - Locally:    create a gitignored config.js with your real key.
+    // - Production: GitHub Actions generates config.js from GitHub Secrets at deploy time.
+    function loadConfig() {
+        return new Promise((resolve) => {
+            if (window.CHATBOT_API_KEY) {
+                // Already loaded (e.g. from a previous script tag or hot reload)
+                return resolve(window.CHATBOT_API_KEY);
+            }
+            const script = document.createElement("script");
+            script.src = "config.js?v=" + new Date().getTime();
+            script.onload = () => resolve(window.CHATBOT_API_KEY || null);
+            script.onerror = () => resolve(null); // config.js not found — key unavailable
+            document.head.appendChild(script);
+        });
+    }
 
     function toggleChat() {
         windowEl.classList.toggle("active");
@@ -83,8 +95,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // API Wrapper Function
     async function askChatbotAPI(question) {
-        if (OPENAI_API_KEY === "REPLACE_WITH_OPENAI_API_KEY") {
-            return "Maaf, API Key belum dikonfigurasi. Silakan hubungi admin.";
+        const apiKey = await loadConfig();
+
+        if (!apiKey) {
+            return "Maaf, chatbot belum dikonfigurasi. Silakan hubungi admin OSIS.";
         }
 
         try {
@@ -92,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${OPENAI_API_KEY}`
+                    'Authorization': `Bearer ${apiKey}`
                 },
                 body: JSON.stringify({
                     model: "gpt-3.5-turbo",
