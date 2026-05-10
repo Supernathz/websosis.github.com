@@ -50,8 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const typingIndicator = document.getElementById("typingIndicator");
 
     // OpenAI Configuration
-    // The key below is a placeholder that should be replaced during deployment (e.g. via GitHub Actions)
-    const OPENAI_API_KEY = "REPLACE_WITH_OPENAI_API_KEY";
+    // Key ini dimasukkan untuk pengetesan lokal.
+    const OPENAI_API_KEY = "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";
 
     function toggleChat() {
         windowEl.classList.toggle("active");
