@@ -84,12 +84,13 @@
     filter: drop-shadow(0 0 5px rgba(0, 210, 255, 0.5));
 }
 
-.chatbot-header h3 {
+.chatbot-window .chatbot-header .chatbot-header-info h3 {
     margin: 0;
     font-size: 18px;
     font-weight: 700;
-    color: white !important; /* Overriding global style.css */
+    color: #ffffff !important;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .chatbot-header p {

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 1. Inject CSS link
     const cssLink = document.createElement("link");
     cssLink.rel = "stylesheet";
-    cssLink.href = "chatbot.css";
+    cssLink.href = "chatbot.css?v=" + new Date().getTime(); // Cache busting
     document.head.appendChild(cssLink);
 
     // 2. Inject HTML structure
