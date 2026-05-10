@@ -1,0 +1,14 @@
+# Local environment variables
+.env
+.env.local
+.env.*.local
+
+# Node dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
