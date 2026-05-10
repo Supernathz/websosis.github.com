@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="chatbot-header-info">
                         <i class="fa-solid fa-robot"></i>
                         <div>
-                            <h3>OSIS Assistant</h3>
+                            <h3>Nemo</h3>
                             <p>Online</p>
                         </div>
                     </div>
                     <button class="chatbot-close" id="chatbotClose"><i class="fa-solid fa-times"></i></button>
                 </div>
                 <div class="chatbot-messages" id="chatbotMessages">
-                    <div class="chat-bubble chat-bot">Halo! Ada yang bisa saya bantu tentang OSIS SMAK IPTO?</div>
+                    <div class="chat-bubble chat-bot">Halo! Saya Nemo, asisten virtual OSIS SMAK IPTO. Ada yang bisa saya bantu?</div>
                     <div class="typing-indicator" id="typingIndicator">
                         <span></span><span></span><span></span>
                     </div>
@@ -48,6 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputEl = document.getElementById("chatbotInput");
     const sendBtn = document.getElementById("chatbotSend");
     const typingIndicator = document.getElementById("typingIndicator");
+
+    // OpenAI Configuration
+    // The key below is a placeholder that should be replaced during deployment (e.g. via GitHub Actions)
+    const OPENAI_API_KEY = "REPLACE_WITH_OPENAI_API_KEY";
 
     function toggleChat() {
         windowEl.classList.toggle("active");
@@ -78,41 +82,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // API Wrapper Function
     async function askChatbotAPI(question) {
-        // REPLACE THIS WITH ACTUAL API CALL LATER
-        /* 
+        if (OPENAI_API_KEY === "REPLACE_WITH_OPENAI_API_KEY") {
+            return "Maaf, API Key belum dikonfigurasi. Silakan hubungi admin.";
+        }
+
         try {
-            const response = await fetch('YOUR_API_ENDPOINT_HERE', {
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: question })
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${OPENAI_API_KEY}`
+                },
+                body: JSON.stringify({
+                    model: "gpt-3.5-turbo",
+                    messages: [
+                        { role: "system", content: "Nama kamu adalah Nemo, asisten virtual untuk OSIS SMAK IPTO. Kamu ramah, membantu, dan tahu banyak tentang kegiatan OSIS, komunitas sekolah (seperti PMR, Dance, Music, Tech, dll), dan acara sekolah (seperti JAWA's Social Quest). Gunakan bahasa Indonesia yang sopan dan santai." },
+                        { role: "user", content: question }
+                    ],
+                    temperature: 0.7
+                })
             });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                console.error("OpenAI Error:", errorData);
+                return "Maaf, terjadi masalah saat menghubungi Nemo. Silakan coba lagi nanti.";
+            }
+
             const data = await response.json();
-            return data.reply;
+            return data.choices[0].message.content;
         } catch (error) {
             console.error("Chatbot API Error:", error);
-            return "Maaf, terjadi kesalahan saat menghubungi server.";
+            return "Maaf, terjadi kesalahan koneksi. Pastikan internet Anda aktif.";
         }
-        */
-
-        // Mock API logic for now
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                const lowerQ = question.toLowerCase();
-                let reply = "Maaf, saya belum mengerti. Silakan hubungi kontak kami untuk informasi lebih lanjut.";
-                
-                if (lowerQ.includes("halo") || lowerQ.includes("hai")) {
-                    reply = "Halo! Ada yang ingin ditanyakan?";
-                } else if (lowerQ.includes("osis")) {
-                    reply = "OSIS SMAK IPTO adalah organisasi siswa intra sekolah yang berdedikasi untuk melayani seluruh siswa.";
-                } else if (lowerQ.includes("komunitas")) {
-                    reply = "Kami memiliki berbagai komunitas seperti PMR, Dance, Music, Tech, dan banyak lagi! Cek menu Komunitas untuk detailnya.";
-                } else if (lowerQ.includes("acara")) {
-                    reply = "Acara terdekat kami adalah JAWA's Social Quest. Kunjungi menu Acara untuk info lebih lanjut!";
-                }
-
-                resolve(reply);
-            }, 1000 + Math.random() * 1000); // simulate network delay
-        });
     }
 
     async function handleSend() {
