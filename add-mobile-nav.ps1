@@ -1,15 +1,15 @@
 $ErrorActionPreference = "Stop"
 $dir = "c:\Users\Bernardyoe\Documents\Website Osis"
-$files = Get-ChildItem -Path $dir -Filter "*.html" | Where-Object { $_.Name -ne "index.html" }
+$files = Get-ChildItem -Path $dir -Filter "*" | Where-Object { $_.Name -ne "index" }
 
 $navSearch = @"
-            <a href="contactus.html" class="btn-contact">Contact Us</a>
+            <a href="contactus" class="btn-contact">Contact Us</a>
         </div>
     </nav>
 "@
 
 $navReplace = @"
-            <a href="contactus.html" class="btn-contact">Contact Us</a>
+            <a href="contactus" class="btn-contact">Contact Us</a>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -21,31 +21,31 @@ $navReplace = @"
 
     <!-- Mobile Navigation Drawer -->
     <nav class="mobile-nav" id="mobileNav">
-        <a href="index.html" class="mobile-nav-link">Homepage</a>
-        <a href="aboutus.html" class="mobile-nav-link">About Us</a>
-        <a href="anggota.html" class="mobile-nav-link">Anggota</a>
-        <a href="komunitas.html" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'komunitas-dd')">Komunitas <i class="fa-solid fa-chevron-down"></i></a>
+        <a href="index" class="mobile-nav-link">Homepage</a>
+        <a href="aboutus" class="mobile-nav-link">About Us</a>
+        <a href="anggota" class="mobile-nav-link">Anggota</a>
+        <a href="komunitas" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'komunitas-dd')">Komunitas <i class="fa-solid fa-chevron-down"></i></a>
         <div class="mobile-dropdown" id="komunitas-dd">
-            <a href="komunitas-animation.html">Animation Community</a>
-            <a href="komunitas-revival.html">Community of Revival</a>
-            <a href="komunitas-podcast.html">Podcast Community</a>
-            <a href="komunitas-pmr.html">PMR Community</a>
-            <a href="komunitas-theatre.html">Theatre Community</a>
-            <a href="komunitas-photography.html">Photography Community</a>
-            <a href="komunitas-emagazine.html">E-Magazine Community</a>
-            <a href="komunitas-cooking.html">Cooking Community</a>
-            <a href="komunitas-mural.html">Mural Community</a>
-            <a href="komunitas-dance.html">Dance Community</a>
-            <a href="komunitas-paskibra.html">Paskibra Community</a>
-            <a href="komunitas-music.html">Music Community</a>
-            <a href="komunitas-tech.html">Tech Community</a>
+            <a href="komunitas-animation">Animation Community</a>
+            <a href="komunitas-revival">Community of Revival</a>
+            <a href="komunitas-podcast">Podcast Community</a>
+            <a href="komunitas-pmr">PMR Community</a>
+            <a href="komunitas-theatre">Theatre Community</a>
+            <a href="komunitas-photography">Photography Community</a>
+            <a href="komunitas-emagazine">E-Magazine Community</a>
+            <a href="komunitas-cooking">Cooking Community</a>
+            <a href="komunitas-mural">Mural Community</a>
+            <a href="komunitas-dance">Dance Community</a>
+            <a href="komunitas-paskibra">Paskibra Community</a>
+            <a href="komunitas-music">Music Community</a>
+            <a href="komunitas-tech">Tech Community</a>
         </div>
-        <a href="acara.html" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'acara-dd')">Acara <i class="fa-solid fa-chevron-down"></i></a>
+        <a href="acara" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'acara-dd')">Acara <i class="fa-solid fa-chevron-down"></i></a>
         <div class="mobile-dropdown" id="acara-dd">
-            <a href="acara-paskah.html">Acara Paskah</a>
-            <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
+            <a href="acara-paskah">Acara Paskah</a>
+            <a href="acara-jawa-social-quest">JAWA's Social Quest</a>
         </div>
-        <a href="contactus.html" class="mobile-contact-btn"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+        <a href="contactus" class="mobile-contact-btn"><i class="fa-solid fa-envelope"></i> Contact Us</a>
     </nav>
 "@
 

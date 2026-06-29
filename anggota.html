@@ -52,7 +52,7 @@
             transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
             filter: grayscale(30%);
             transform: scale(1.01);
-            /* Prevent edge bleeding */
+            object-position: center top;
         }
 
         .member-card:hover .member-img-wrap img {
@@ -75,6 +75,11 @@
             margin-bottom: 0.5rem;
             font-family: 'Poppins', sans-serif;
         }
+        .member-role h3{
+            color:var(--primary); 
+            font-size: 1.2rem; 
+            margin-bottom:0.5rem;
+        } 
 
         .social-row {
             display: flex;
@@ -104,6 +109,11 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             transform: translateY(0);
         }
+        .member-desc p{
+            color:var(--text-muted);
+             font-size: 0.95rem; 
+             font-style: italic;
+        }
 
         .social-row a {
             color: var(--primary);
@@ -132,44 +142,44 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="brand" style="display:flex; align-items:center; text-decoration: none;">
+            <a href="index" class="brand" style="display:flex; align-items:center; text-decoration: none;">
                 <img src="assets/1000105640.png" alt="Logo OSIS IPTO"
                     style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;">
             </a>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Homepage</a></li>
-                <li><a href="aboutus.html" class="nav-link">About Us</a></li>
-                <li><a href="anggota.html" class="nav-link active">Anggota</a></li>
+                <li><a href="index" class="nav-link">Homepage</a></li>
+                <li><a href="aboutus" class="nav-link">About Us</a></li>
+                <li><a href="anggota" class="nav-link active">Anggota</a></li>
 
                 <li class="dropdown">
-                    <a href="komunitas.html" class="nav-link">Komunitas <i class="fa-solid fa-chevron-down"
+                    <a href="komunitas" class="nav-link">Komunitas <i class="fa-solid fa-chevron-down"
                             style="font-size: 0.8em; margin-left: 5px;"></i></a>
                     <div class="dropdown-content">
                         
-                        <a href="komunitas-revival.html">Community of Revival</a>
-                        <a href="komunitas-podcast.html">Podcast Community</a>
-                        <a href="komunitas-pmr.html">PMR Community</a>
-                        <a href="komunitas-theatre.html">Theatre Community</a>
-                        <a href="komunitas-photography.html">Photography Community</a>
-                        <a href="komunitas-emagazine.html">E-Magazine Community</a>
-                        <a href="komunitas-cooking.html">Cooking Community</a>
-                        <a href="komunitas-mural.html">Mural Community</a>
-                        <a href="komunitas-dance.html">Dance Community</a>
-                        <a href="komunitas-paskibra.html">Paskibra Community</a>
-                        <a href="komunitas-music.html">Music Community</a>
-                        <a href="komunitas-tech.html">Tech Community</a>
+                        <a href="komunitas-revival">Community of Revival</a>
+                        <a href="komunitas-podcast">Podcast Community</a>
+                        <a href="komunitas-pmr">PMR Community</a>
+                        <a href="komunitas-theatre">Theatre Community</a>
+                        <a href="komunitas-photography">Photography Community</a>
+                        <a href="komunitas-emagazine">E-Magazine Community</a>
+                        <a href="komunitas-cooking">Cooking Community</a>
+                        <a href="komunitas-mural">Mural Community</a>
+                        <a href="komunitas-dance">Dance Community</a>
+                        <a href="komunitas-paskibra">Paskibra Community</a>
+                        <a href="komunitas-music">Music Community</a>
+                        <a href="komunitas-tech">Tech Community</a>
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="acara.html" class="nav-link">Acara <i class="fa-solid fa-chevron-down"
+                    <a href="acara" class="nav-link">Acara <i class="fa-solid fa-chevron-down"
                             style="font-size: 0.8em; margin-left: 5px;"></i></a>
                     <div class="dropdown-content">
                         
-                        <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
+                        <a href="acara-jawa-social-quest">JAWA's Social Quest</a>
                     </div>
                 </li>
             </ul>
-            <a href="contactus.html" class="btn-contact">Contact Us</a>
+            <a href="contactus" class="btn-contact">Contact Us</a>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -181,31 +191,31 @@
 
     <!-- Mobile Navigation Drawer -->
     <nav class="mobile-nav" id="mobileNav">
-        <a href="index.html" class="mobile-nav-link">Homepage</a>
-        <a href="aboutus.html" class="mobile-nav-link">About Us</a>
-        <a href="anggota.html" class="mobile-nav-link active">Anggota</a>
-        <a href="komunitas.html" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'komunitas-dd')">Komunitas <i class="fa-solid fa-chevron-down"></i></a>
+        <a href="index" class="mobile-nav-link">Homepage</a>
+        <a href="aboutus" class="mobile-nav-link">About Us</a>
+        <a href="anggota" class="mobile-nav-link active">Anggota</a>
+        <a href="komunitas" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'komunitas-dd')">Komunitas <i class="fa-solid fa-chevron-down"></i></a>
         <div class="mobile-dropdown" id="komunitas-dd">
             
-            <a href="komunitas-revival.html">Community of Revival</a>
-            <a href="komunitas-podcast.html">Podcast Community</a>
-            <a href="komunitas-pmr.html">PMR Community</a>
-            <a href="komunitas-theatre.html">Theatre Community</a>
-            <a href="komunitas-photography.html">Photography Community</a>
-            <a href="komunitas-emagazine.html">E-Magazine Community</a>
-            <a href="komunitas-cooking.html">Cooking Community</a>
-            <a href="komunitas-mural.html">Mural Community</a>
-            <a href="komunitas-dance.html">Dance Community</a>
-            <a href="komunitas-paskibra.html">Paskibra Community</a>
-            <a href="komunitas-music.html">Music Community</a>
-            <a href="komunitas-tech.html">Tech Community</a>
+            <a href="komunitas-revival">Community of Revival</a>
+            <a href="komunitas-podcast">Podcast Community</a>
+            <a href="komunitas-pmr">PMR Community</a>
+            <a href="komunitas-theatre">Theatre Community</a>
+            <a href="komunitas-photography">Photography Community</a>
+            <a href="komunitas-emagazine">E-Magazine Community</a>
+            <a href="komunitas-cooking">Cooking Community</a>
+            <a href="komunitas-mural">Mural Community</a>
+            <a href="komunitas-dance">Dance Community</a>
+            <a href="komunitas-paskibra">Paskibra Community</a>
+            <a href="komunitas-music">Music Community</a>
+            <a href="komunitas-tech">Tech Community</a>
         </div>
-        <a href="acara.html" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'acara-dd')">Acara <i class="fa-solid fa-chevron-down"></i></a>
+        <a href="acara" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'acara-dd')">Acara <i class="fa-solid fa-chevron-down"></i></a>
         <div class="mobile-dropdown" id="acara-dd">
             
-            <a href="acara-jawa-social-quest.html">JAWA's Social Quest</a>
+            <a href="acara-jawa-social-quest">JAWA's Social Quest</a>
         </div>
-        <a href="contactus.html" class="mobile-contact-btn"><i class="fa-solid fa-envelope"></i> Contact Us</a>
+        <a href="contactus" class="mobile-contact-btn"><i class="fa-solid fa-envelope"></i> Contact Us</a>
     </nav>
 
     <main style="padding-top: var(--nav-height);">
@@ -239,67 +249,67 @@
         <section class="section container" style="padding-bottom: 2.5rem;">
             <div class="members-grid">
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/BPH (GURU)/Slamet.JPG" alt="Pembina"></div>
+                    <div class="member-img-wrap"><img src="assets/BPH-Guru/Slamet.JPG" alt="Pembina"></div>
                     <div class="member-info">
                         <div class="member-role">Pembina</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Bp. Slamet Widodo
+                        <h3>Bp. Slamet Widodo
                         </h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/slamet3451/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/BPH (MURID)/Justin.jpg" alt="Ketua OSIS"></div>
+                    <div class="member-img-wrap"><img src="assets/BPH-Murid/Justin.jpg" alt="Ketua OSIS"></div>
                     <div class="member-info">
                         <div class="member-role">Ketua OSIS</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Justin Phelix Phang -
+                        <h3>Justin Phelix Phang -
                             11.3</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/juicetinp/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/BPH (MURID)/Andrew.JPG" alt="Wakil Ketua OSIS"></div>
+                    <div class="member-img-wrap"><img src="assets/BPH-Murid/Andrew.JPG" alt="Wakil Ketua OSIS"></div>
                     <div class="member-info">
                         <div class="member-role">Wakil Ketua OSIS</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Andrew Gunawan - 11.2
+                        <h3>Andrew Gunawan - 11.2
                         </h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/drewwgunawan/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/BPH (MURID)/maureen.JPG" alt="Sekretaris 1"></div>
+                    <div class="member-img-wrap"><img src="assets/BPH-Murid/maureen.JPG" alt="Sekretaris 1"></div>
                     <div class="member-info">
                         <div class="member-role">Sekretaris 1</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Maureen Adella Hendra
+                        <h3>Maureen Adella Hendra
                             - 10.3</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/maureen_adella11/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/BPH (MURID)/Graciella.JPG" alt="Sekretaris 2"></div>
+                    <div class="member-img-wrap"><img src="assets/BPH-Murid/Graciella.JPG" alt="Sekretaris 2"></div>
                     <div class="member-info">
                         <div class="member-role">Sekretaris 2</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Graciella Liusdiawan
+                        <h3>Graciella Liusdiawan
                             - 11.1</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/grac.ellai/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/BPH (MURID)/Kaylee.JPG" alt="Bendahara"></div>
+                    <div class="member-img-wrap"><img src="assets/BPH-Murid/Kaylee.JPG" alt="Bendahara"></div>
                     <div class="member-info">
                         <div class="member-role">Bendahara</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Kaylee Noveline Koh -
+                        <h3>Kaylee Noveline Koh -
                             11.3</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/kay.nvl/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
@@ -321,23 +331,23 @@
         <section class="section container" style="padding-bottom: 2.5rem;">
             <div class="members-grid">
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 1/Bernard.JPG" alt="Anggota Sekbid 1"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid1/Bernard.JPG" alt="Anggota Sekbid 1"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 1</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Bernard Yoe - 11.1
+                        <h3>Bernard Yoe - 11.1
                         </h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/bernard.y_o_e/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 1/Bravian.jpeg" alt="Anggota Sekbid 1"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid1/Bravian.jpeg" alt="Anggota Sekbid 1"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 1</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Bravian Abner Trisno
+                        <h3>Bravian Abner Trisno
                             - 10.1</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/bravian_abner_trisno/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
@@ -359,23 +369,23 @@
         <section class="section container" style="padding-bottom: 2.5rem;">
             <div class="members-grid">
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 2/Sharon.JPG" alt="Anggota Sekbid 2"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid2/Sharon.JPG" alt="Anggota Sekbid 2"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 2</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Sharon Lindia Halim -
+                        <h3>Sharon Lindia Halim -
                             11.2</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/lindiasharon0506/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 2/Evangeline.JPG" alt="Anggota Sekbid 2"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid2/Evangeline.JPG" alt="Anggota Sekbid 2"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 2</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Evangeline Felicia
+                        <h3>Evangeline Felicia
                             Nugraha - 10.2</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/evangeline_feliciaa/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
@@ -397,23 +407,23 @@
         <section class="section container" style="padding-bottom: 2.5rem;">
             <div class="members-grid">
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 3/Jayden.JPG" alt="Anggota Sekbid 3"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid3/Jayden.JPG" alt="Anggota Sekbid 3"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 3</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Jayden Hartanto -
+                        <h3>Jayden Hartanto -
                             11.3</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/jaydenhartanto/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 3/Caroline.JPG" alt="Anggota Sekbid 3"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid3/Caroline.JPG" alt="Anggota Sekbid 3"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 3</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Caroline Japutra -
+                        <h3>Caroline Japutra -
                             10.1</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/linnn_oline/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
@@ -435,34 +445,34 @@
         <section class="section container" style="padding-bottom: 2.5rem;">
             <div class="members-grid">
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 4/Audrey.JPG" alt="Anggota Sekbid 4"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid4/Audrey.JPG" alt="Anggota Sekbid 4"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 4</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Audrey Cen - 11.1
+                        <h3>Audrey Cen - 11.1
                         </h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/dreyycen/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 4/Jesselyn.JPG" alt="Anggota Sekbid 4"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid4/Jesselyn.JPG" alt="Anggota Sekbid 4"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 4</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Jesselyn Olivia
+                        <h3>Jesselyn Olivia
                             Suriadi - 10.3</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/jessselyn_"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 4/Jacklyne.jpg" alt="Anggota Sekbid 4"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid4/Jacklyne.jpg" alt="Anggota Sekbid 4"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 4</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Regina Jacklyne
+                        <h3>Regina Jacklyne
                             Sugiono - 10.2</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/jacklyne.sugiono/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
@@ -484,34 +494,34 @@
         <section class="section container" style="padding-bottom: 2.5rem;">
             <div class="members-grid">
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 5/Michelle F.JPG" alt="Anggota Sekbid 5"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid5/Michelle_F.JPG" alt="Anggota Sekbid 5"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 5</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Michelle Fransisca -
+                        <h3>Michelle Fransisca -
                             11.3</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/michelleee_fransisca/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 5/Javelyn.jpeg" alt="Anggota Sekbid 5"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid5/Javelyn.jpeg" alt="Anggota Sekbid 5"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 5</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Javelyn Liauw - 10.1
+                        <h3>Javelyn Liauw - 10.1
                         </h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/javelynliauw/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 5/Joanna.JPG" alt="Anggota Sekbid 5"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid5/Joanna.JPG" alt="Anggota Sekbid 5"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 5</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Joanna Lukiman - 10.1
+                        <h3>Joanna Lukiman - 10.1
                         </h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
@@ -532,34 +542,34 @@
         <section class="section container" style="padding-bottom: 2.5rem;">
             <div class="members-grid">
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 6/Darlene.jpeg" alt="Anggota Sekbid 6"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid6/Darlene.jpeg" alt="Anggota Sekbid 6"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 6</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Darlenne Dorea
+                        <h3>Darlenne Dorea
                             Gunawan - 10.3</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/delme_t/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 6/Kirana.JPG" alt="Anggota Sekbid 6"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid6/Kirana.JPG" alt="Anggota Sekbid 6"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 6</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Kirana Azelia - 10.3
+                        <h3>Kirana Azelia - 10.3
                         </h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/celiakiranaazelia/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 6/Winston.JPG" alt="Anggota Sekbid 6"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid6/Winston.JPG" alt="Anggota Sekbid 6"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 6</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Winston Lo Isaiah -
+                        <h3>Winston Lo Isaiah -
                             10.3</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/winst_is/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
@@ -581,36 +591,36 @@
         <section class="section container" style="padding-bottom: 5rem;">
             <div class="members-grid">
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 7/feliceee.jpg" alt="Anggota Sekbid 7"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid7/feliceee.jpg" alt="Anggota Sekbid 7"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 7</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Felice Ham - 11.3
+                        <h3>Felice Ham - 11.3
                         </h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/_felham/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 7/Abigail.JPG" alt="Anggota Sekbid 7"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid7/Abigail.JPG" alt="Anggota Sekbid 7"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 7</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Abigail Elizabeth
+                        <h3>Abigail Elizabeth
                             Budiman - 10.1</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
+                        <p>PLACEHOLDER</p>
                         <div class="social-row"><a href="https://www.instagram.com/abi.elizab/"><i
                                     class="fa-brands fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="member-card animate-fade-up">
-                    <div class="member-img-wrap"><img src="assets/Sekbid 7/Dawson.JPG" alt="Anggota Sekbid 7"></div>
+                    <div class="member-img-wrap"><img src="assets/Sekbid7/Dawson.JPG" alt="Anggota Sekbid 7"></div>
                     <div class="member-info">
                         <div class="member-role">Anggota Sekbid 7</div>
-                        <h3 style="color:var(--primary); font-size: 1.2rem; margin-bottom:0.5rem;">Dawson Althea Wuson -
+                        <h3>Dawson Althea Wuson -
                             10.1</h3>
-                        <p class="member-desc" style="color:var(--text-muted); font-size: 0.95rem; font-style: italic;">PLACEHOLDER</p>
-                        <div class="social-row"><a href="https://www.instagram.com/wusonwawa/" <i
-                                class="fa-brands fa-instagram"></i></a></div>
+                        <p>PLACEHOLDER</p>
+                        <div class="social-row"><a href="https://www.instagram.com/wusonwawa/"> <i
+                                class="fa-brands fa-instagram"></i>></a></div>
                     </div>
                 </div>
             </div>
@@ -632,11 +642,11 @@
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="index.html">Homepage</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="anggota.html">Anggota</a></li>
+                    <li><a href="index">Homepage</a></li>
+                    <li><a href="aboutus">About Us</a></li>
+                    <li><a href="anggota">Anggota</a></li>
                     <li></li>
-                    <li><a href="acara.html">Acara</a></li>
+                    <li><a href="acara">Acara</a></li>
                 </ul>
             </div>
             <div class="footer-links">

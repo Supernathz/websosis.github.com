@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 $dir = "c:\Users\Bernardyoe\Documents\Website Osis"
-$files = Get-ChildItem -Path $dir -Filter "*.html"
+$files = Get-ChildItem -Path $dir -Filter "*"
 
 $newAddress = "Jl. Green Ville Blok D, RT./RW:/RW.07/05, Duri Kepa, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11510, Indonesia"
 $newPhone = "08111346152"

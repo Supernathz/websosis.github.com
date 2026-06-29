@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 $dir = "c:\Users\Bernardyoe\Documents\Website Osis"
-$files = Get-ChildItem -Path $dir -Filter "*.html"
+$files = Get-ChildItem -Path $dir -Filter "*"
 
 # Global Footer replacements
 $oldAddress = "Jl. Macan No.21, Jakarta Barat"
@@ -34,7 +34,7 @@ foreach ($file in $files) {
     }
     
     # Special rules for contactus.html
-    if ($file.Name -eq "contactus.html") {
+    if ($file.Name -eq "contactus") {
         # Contact Emails
         $oldContactEmail = "bernard_yoe@tomang.ipeka.sch.id<br>info.osis@smakipto.sch.id</p>"
         $newContactEmail = "justin_phang@tomang.ipeka.sch.id (Stuco President)<br>bernard_yoe@tomang.ipeka.sch.id (Website AdmIn)</p>"
@@ -61,7 +61,7 @@ foreach ($file in $files) {
     }
     
     # Special rules for anggota.html
-    if ($file.Name -eq "anggota.html") {
+    if ($file.Name -eq "anggota") {
         $regexPattern = '(<p class="member-desc"[^>]*>)[^<]*(</p>)'
         $newContent = [System.Text.RegularExpressions.Regex]::Replace($content, $regexPattern, '${1}PLACEHOLDER${2}')
         if ($content -ne $newContent) {

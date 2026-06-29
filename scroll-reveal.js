@@ -2,47 +2,30 @@
 // Works on all pages. Animates elements on scroll down AND re-hides on scroll up.
 (function () {
     const AUTO_TARGETS = [
-        '.tentang-content .tentang-label',
-        '.tentang-content .tentang-title',
-        '.tentang-content .tentang-desc',
         '.tentang-logo',
-        '.section-title h2',
-        '.section-title p',
-        '.card', // Catch all cards on any page
+        '.section-title',
         '.gallery-slide',
         '.gallery-carousel',
         '.carousel-dots',
         '.footer-brand',
         '.footer-links',
         '.reveal-item',
-        '.animate-fade-up', // Catch old classes
-        '.member-card', // anggota.html
-        '.member-img-wrap', // foto anggota
-        '.club-image img', // foto di komunitas/acara
-        // Community & event pages
-        '.club-page .club-title',
-        '.club-page .club-subtitle',
+        
+        // ✨ Outer Containers Only (Let the animation cascade naturally)
+        '.animate-fade-up', 
+        '.member-card', 
+        '.event-card',
+        '.community-card',
+        '.rundown-item', 
+        '.event-info-item', 
+        '.doc-item',
+        
+        // Community & event pages outer structures
         '.club-hero-image',
         '.club-section',
         '.club-cta',
-        '.club-nav',
-        '.event-card',
-        '.community-card',
-        '.rundown-item', // acara
-        '.event-info-item', // acara
-        '.doc-item', // acara
-        // General elements inside containers
-        '.container h1',
-        '.container h2',
-        '.container h3',
-        '.container p:not(.member-desc)',
-        '.container .btn',
-        '.club-content p',
-        '.club-content h2',
-        '.club-content h3',
-        '.club-content li'
+        '.club-nav'
     ];
-
     const seen = new WeakSet();
 
     function prepareEl(el, i) {
@@ -60,11 +43,6 @@
         el.style.transform = 'translateY(0)';
     }
 
-    function hideEl(el) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(-40px)';
-    }
-
     if (!('IntersectionObserver' in window)) {
         document.querySelectorAll(AUTO_TARGETS.join(',')).forEach(showEl);
         return;
@@ -75,8 +53,7 @@
         entries.forEach(function (e) {
             if (e.isIntersecting) {
                 showEl(e.target);
-            } else {
-                hideEl(e.target);
+                observer.unobserve(e.target);
             }
         });
     }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
