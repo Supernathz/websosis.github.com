@@ -178,33 +178,7 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-container"><a href="index" class="brand"
-                style="display:flex; align-items:center; text-decoration: none;"><img src="assets/1000105640.png"
-                    alt="Logo OSIS IPTO" style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;"></a>
-            <ul class="nav-links">
-                <li><a href="index" class="nav-link">Homepage</a></li>
-                <li><a href="aboutus" class="nav-link">About Us</a></li>
-                <li><a href="anggota" class="nav-link">Anggota</a></li>
-                <li class="dropdown"><a href="komunitas" class="nav-link active">Komunitas <i
-                            class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
-                    <div class="dropdown-content"><a href="komunitas-revival">Community of Revival</a><a
-                            href="komunitas-podcast">Podcast Community</a><a href="komunitas-pmr">PMR
-                            Community</a><a href="komunitas-theatre">Theatre Community</a><a
-                            href="komunitas-photography">Photography Community</a><a
-                            href="komunitas-emagazine">E-Magazine Community</a><a
-                            href="komunitas-cooking">Cooking Community</a><a href="komunitas-mural">Mural
-                            Community</a><a href="komunitas-dance">Dance Community</a><a
-                            href="komunitas-paskibra">Paskibra Community</a><a href="komunitas-music">Music
-                            Community</a><a href="komunitas-tech">Tech Community</a></div>
-                </li>
-                <li class="dropdown"><a href="acara" class="nav-link ">Acara <i class="fa-solid fa-chevron-down"
-                            style="font-size: 0.8em; margin-left: 5px;"></i></a>
-                    <div class="dropdown-content"><a href="acara-jawa-social-quest">JAWA's Social Quest</a></div>
-                </li>
-            </ul><a href="contactus" class="btn-contact">Contact Us</a>
-        </div>
-    </nav>
+    <div id="global-nav"></div>
 
     <main style="padding-top: var(--nav-height);">
         <div class="club-page">
@@ -254,44 +228,39 @@
     </main>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h2>OSIS<span>SMAK</span>IPTO</h2>
-                <p>Membentuk pemimpin masa depan yang melayani dengan ketulusan dan berintegritas tinggi berdasarkan
-                    iman Kristiani.</p>
-                <div class="social-links"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i
-                            class="fa-brands fa-tiktok"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index">Homepage</a></li>
-                    <li><a href="aboutus">About Us</a></li>
-                    <li><a href="anggota">Anggota</a></li>
-                    <li></li>
-                    <li><a href="acara">Acara</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><a href="#"><i class="fa-solid fa-location-dot" style="margin-right:10px;"></i> Jl. Green Ville
-                            Blok D, RT./RW:/RW.07/05, Duri Kepa, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus
-                            Ibukota Jakarta 11510, Indonesia</a></li>
-                    <li><a href="#"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i>
-                            bernard_yoe@tomang.ipeka.sch.id</a></li>
-                    <li><a href="#"><i class="fa-brands fa-whatsapp" style="margin-right:10px;"></i> 08111346152</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 OSIS SMAK IPEKA Tomang. All rights reserved.</p>
-        </div>
+        <div id="global-footer"></div>
     </footer>
 
-    <script src="mobile-nav.js"></script>
+
+    <script>
+    // 1. Fetch the unified nav template
+    fetch('components/navbar.html')
+        .then(response => response.text())
+        .then(htmlContent => {
+            // 2. Inject the code layout into the placeholder target
+            document.getElementById('global-nav').innerHTML = htmlContent;
+            const currentPath = window.location.pathname.split('/').pop() || 'index';
+            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+            const mobileNavScript = document.createElement('script');
+            mobileNavScript.src = 'mobile-nav.js';
+            document.body.appendChild(mobileNavScript);
+        })
+        .catch(error => console.error('Error constructing modular navbar wrapper:', error));
+
+    // 2. Fetch the unified footer template
+    fetch('components/footer.html')
+        .then(response => response.text())
+        .then(htmlContent => {
+            // Inject the footer code into the placeholder target
+            document.getElementById('global-footer').innerHTML = htmlContent;
+        })
+        .catch(error => console.error('Error constructing modular footer wrapper:', error));
+</script>
+<script src="mobile-nav.js"></script>
     <script src="scroll-reveal.js"></script>
     <script src="chatbot.js"></script>
 </body>

@@ -57,7 +57,35 @@ $footerSearch = @"
 $footerReplace = @"
     </footer>
 
-    <script src="mobile-nav.js"></script>
+    <script>
+    // 1. Fetch the unified nav template
+    fetch('components/navbar.html')
+        .then(response => response.text())
+        .then(htmlContent => {
+            // 2. Inject the code layout into the placeholder target
+            document.getElementById('global-nav').innerHTML = htmlContent;
+            const currentPath = window.location.pathname.split('/').pop() || 'index';
+            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+            const mobileNavScript = document.createElement('script');
+            mobileNavScript.src = 'mobile-nav.js';
+            document.body.appendChild(mobileNavScript);
+        })
+        .catch(error => console.error('Error constructing modular navbar wrapper:', error));
+
+    // 2. Fetch the unified footer template
+    fetch('components/footer.html')
+        .then(response => response.text())
+        .then(htmlContent => {
+            // Inject the footer code into the placeholder target
+            document.getElementById('global-footer').innerHTML = htmlContent;
+        })
+        .catch(error => console.error('Error constructing modular footer wrapper:', error));
+</script>
+<script src="mobile-nav.js"></script>
 </body>
 "@
 

@@ -6,304 +6,182 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSIS SMAK IPTO | Komunitas</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index" class="brand" style="display:flex; align-items:center; text-decoration: none;">
-                <img src="assets/1000105640.png" alt="Logo OSIS IPTO" style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index" class="nav-link">Homepage</a></li>
-                <li><a href="aboutus" class="nav-link">About Us</a></li>
-                <li><a href="anggota" class="nav-link">Anggota</a></li>
+    <div id="global-nav"></div>
 
-                <li class="dropdown">
-                    <a href="komunitas" class="nav-link">Komunitas <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
-                    <div class="dropdown-content">
-
-                        <a href="komunitas-revival">Community of Revival</a>
-                        <a href="komunitas-podcast">Podcast Community</a>
-                        <a href="komunitas-pmr">PMR Community</a>
-                        <a href="komunitas-theatre">Theatre Community</a>
-                        <a href="komunitas-photography">Photography Community</a>
-                        <a href="komunitas-emagazine">E-Magazine Community</a>
-                        <a href="komunitas-cooking">Cooking Community</a>
-                        <a href="komunitas-mural">Mural Community</a>
-                        <a href="komunitas-dance">Dance Community</a>
-                        <a href="komunitas-paskibra">Paskibra Community</a>
-                        <a href="komunitas-music">Music Community</a>
-                        <a href="komunitas-tech">Tech Community</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="acara" class="nav-link">Acara <i class="fa-solid fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></a>
-                    <div class="dropdown-content">
-
-                        <a href="acara-jawa-social-quest">JAWA's Social Quest</a>
-                    </div>
-                </li>
-            </ul>
-            <a href="contactus" class="btn-contact">Contact Us</a>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Overlay -->
-    <div class="mobile-overlay" id="mobileOverlay"></div>
-
-    <!-- Mobile Navigation Drawer -->
-    <nav class="mobile-nav" id="mobileNav">
-        <a href="index" class="mobile-nav-link">Homepage</a>
-        <a href="aboutus" class="mobile-nav-link">About Us</a>
-        <a href="anggota" class="mobile-nav-link">Anggota</a>
-        <a href="komunitas" class="mobile-nav-link active" onclick="toggleMobileDropdown(event, 'komunitas-dd')">Komunitas <i class="fa-solid fa-chevron-down"></i></a>
-        <div class="mobile-dropdown open" id="komunitas-dd">
-
-            <a href="komunitas-revival">Community of Revival</a>
-            <a href="komunitas-podcast">Podcast Community</a>
-            <a href="komunitas-pmr">PMR Community</a>
-            <a href="komunitas-theatre">Theatre Community</a>
-            <a href="komunitas-photography">Photography Community</a>
-            <a href="komunitas-emagazine">E-Magazine Community</a>
-            <a href="komunitas-cooking">Cooking Community</a>
-            <a href="komunitas-mural">Mural Community</a>
-            <a href="komunitas-dance">Dance Community</a>
-            <a href="komunitas-paskibra">Paskibra Community</a>
-            <a href="komunitas-music">Music Community</a>
-            <a href="komunitas-tech">Tech Community</a>
-        </div>
-        <a href="acara" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'acara-dd')">Acara <i class="fa-solid fa-chevron-down"></i></a>
-        <div class="mobile-dropdown" id="acara-dd">
-
-            <a href="acara-jawa-social-quest">JAWA's Social Quest</a>
-        </div>
-        <a href="contactus" class="mobile-contact-btn"><i class="fa-solid fa-envelope"></i> Contact Us</a>
-    </nav>
-
-    <!-- Main Content -->
     <main style="padding-top: var(--nav-height);">
-        <section class="section" style="background: linear-gradient(to bottom, var(--bg-color), white); text-align:center; padding: 8rem 5% 4rem;">
-            <span class="animate-fade-up" style="color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Student Life</span>
-            <h1 class="font-heading animate-fade-up delay-1" style="font-size: 4.5rem; margin-bottom:1.5rem; color:var(--primary); letter-spacing: -1.5px;">Komunitas IPTO</h1>
-            <p class="animate-fade-up delay-2" style="font-size: 1.25rem; color: var(--text-muted); max-width:700px; margin: 0 auto;">Wadah untuk mengeksplorasi minat, bakat, dan membangun koneksi yang bermakna melalui berbagai klub kebanggaan kami.</p>
+        
+        <section class="section komunitas-hero">
+            <span class="animate-fade-up komunitas-subtitle">Student Life</span>
+            <h1 class="font-heading animate-fade-up delay-1 komunitas-title">Komunitas IPTO</h1>
+            <p class="animate-fade-up delay-2 komunitas-desc">Wadah untuk mengeksplorasi minat, bakat, dan membangun koneksi yang bermakna melalui berbagai klub kebanggaan kami.</p>
         </section>
 
-        <!-- The Clubs Section -->
-        <section class="section container" style="padding-top: 2rem; padding-bottom: 8rem; position: relative;">
+        <section class="section container club-section">
             <div class="cards-grid">
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-hands-praying" style="font-size: 2rem; color: var(--primary);"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-hands-praying" style="color: var(--primary);"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">Community of Revival</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Komunitas kerohanian yang bertumbuh bersama dalam iman, doa, dan pujian.</p>
+                    <div class="club-body">
+                        <h3>Community of Revival</h3>
+                        <p>Komunitas kerohanian yang bertumbuh bersama dalam iman, doa, dan pujian.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1589903308904-1010c2294adc?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1589903308904-1010c2294adc?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-podcast" style="font-size: 2rem; color: var(--accent-orange);"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-podcast" style="color: var(--accent-orange);"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">Podcast Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Mengeksplorasi dunia broadcasting dan public speaking melalui podcast inspiratif.</p>
+                    <div class="club-body">
+                        <h3>Podcast Community</h3>
+                        <p>Mengeksplorasi dunia broadcasting dan public speaking melalui podcast inspiratif.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-kit-medical" style="font-size: 2rem; color: #e74c3c;"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-kit-medical" style="color: #e74c3c;"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">PMR Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Palang Merah Remaja: melayani dan peduli terhadap kesehatan warga sekolah.</p>
+                    <div class="club-body">
+                        <h3>PMR Community</h3>
+                        <p>Palang Merah Remaja: melayani dan peduli terhadap kesehatan warga sekolah.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1507676184212-d0330a15673c?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1507676184212-d0330a15673c?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-masks-theater" style="font-size: 2rem; color: var(--accent-cyan);"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-masks-theater" style="color: var(--accent-cyan);"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">Theatre Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Ekspresikan diri melalui seni peran, drama, dan panggung teater.</p>
+                    <div class="club-body">
+                        <h3>Theatre Community</h3>
+                        <p>Ekspresikan diri melalui seni peran, drama, dan panggung teater.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-camera" style="font-size: 2rem; color: var(--primary);"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-camera" style="color: var(--primary);"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">Photography Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Menangkap momen terbaik dan mempelajari teknik fotografi profesional.</p>
+                    <div class="club-body">
+                        <h3>Photography Community</h3>
+                        <p>Menangkap momen terbaik dan mempelajari teknik fotografi profesional.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-newspaper" style="font-size: 2rem; color: var(--accent-yellow);"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-newspaper" style="color: var(--accent-yellow);"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">E-Magazine Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Mewujudkan jurnalisme sekolah melalui artikel, liputan, dan majalah digital.</p>
+                    <div class="club-body">
+                        <h3>E-Magazine Community</h3>
+                        <p>Mewujudkan jurnalisme sekolah melalui artikel, liputan, dan majalah digital.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1556910103-1c02745a872f?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1556910103-1c02745a872f?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-utensils" style="font-size: 2rem; color: var(--accent-orange);"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-utensils" style="color: var(--accent-orange);"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">Cooking Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Berkreasi dengan rasa dan mengembangkan keahlian tata boga.</p>
+                    <div class="club-body">
+                        <h3>Cooking Community</h3>
+                        <p>Berkreasi dengan rasa dan mengembangkan keahlian tata boga.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1499806489304-20a2cc47b2c5?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1499806489304-20a2cc47b2c5?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-palette" style="font-size: 2rem; color: var(--accent-cyan);"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-palette" style="color: var(--accent-cyan);"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">Mural Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Menghidupkan tembok sekolah dengan karya seni lukis dan warna warni mural.</p>
+                    <div class="club-body">
+                        <h3>Mural Community</h3>
+                        <p>Menghidupkan tembok sekolah dengan karya seni lukis dan warna warni mural.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-shoe-prints" style="font-size: 2rem; color: var(--primary);"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-shoe-prints" style="color: var(--primary);"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">Dance Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Komunitas tari modern dan tradisional untuk mengekspresikan talenta gerak.</p>
+                    <div class="club-body">
+                        <h3>Dance Community</h3>
+                        <p>Komunitas tari modern dan tradisional untuk mengekspresikan talenta gerak.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1541512416146-368bb1590fb4?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1541512416146-368bb1590fb4?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-flag" style="font-size: 2rem; color: #e74c3c;"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-flag" style="color: #e74c3c;"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">Paskibra Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Menjunjung tinggi kedisiplinan dan rasa nasionalisme melalui baris berbaris.</p>
+                    <div class="club-body">
+                        <h3>Paskibra Community</h3>
+                        <p>Menjunjung tinggi kedisiplinan dan rasa nasionalisme melalui baris berbaris.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-music" style="font-size: 2rem; color: var(--accent-cyan);"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-music" style="color: var(--accent-cyan);"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">Music Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Berkarya dan bermain musik bersama, dari alat musik klasik hingga modern.</p>
+                    <div class="club-body">
+                        <h3>Music Community</h3>
+                        <p>Berkarya dan bermain musik bersama, dari alat musik klasik hingga modern.</p>
                     </div>
                 </div>
 
-                <div class="card hover-card" style="padding: 0; overflow: hidden; border-radius: 20px;">
-                    <div style="height: 180px; background: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80') center/cover; position: relative;">
-                        <!-- Overlay -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+                <div class="card hover-card club-card reveal-item">
+                    <div class="club-header" style="background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80');">
+                        <div class="club-overlay"></div>
                     </div>
-                    <!-- Icon Overlapping -->
-                    <div style="position: relative; margin-top: -40px; text-align: center;">
-                        <div style="width: 80px; height: 80px; background: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md); border: 4px solid white;">
-                            <i class="fa-solid fa-laptop-code" style="font-size: 2rem; color: var(--accent-orange);"></i>
-                        </div>
+                    <div class="club-icon-wrapper">
+                        <div class="club-icon"><i class="fa-solid fa-laptop-code" style="color: var(--accent-orange);"></i></div>
                     </div>
-                    <div style="padding: 1rem 1.5rem 2rem; text-align: center;">
-                        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 0.6rem; font-weight: 700; line-height: 1.2;">Tech Community</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5; min-height: 3em;">Wadah inovasi teknologi, pemrograman web, dan eksplorasi dunia IT.</p>
+                    <div class="club-body">
+                        <h3>Tech Community</h3>
+                        <p>Wadah inovasi teknologi, pemrograman web, dan eksplorasi dunia IT.</p>
                     </div>
                 </div>
+
             </div>
         </section>
+
         <section class="gallery-section">
             <div class="gallery-container">
                 <div class="section-title">
@@ -311,15 +189,15 @@
                     <p>Lihat keseruan kegiatan kami melalui lensa dokumentasi.</p>
                 </div>
                 <div class="gallery-grid">
-                    <div class="gallery-item animate-fade-up">
+                    <div class="gallery-item reveal-item">
                         <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&q=80" alt="Gallery 1">
                         <div class="gallery-overlay"><div class="gallery-info"><h4>Event Highlights</h4><p>Momen terbaik kegiatan</p></div></div>
                     </div>
-                    <div class="gallery-item animate-fade-up delay-1">
+                    <div class="gallery-item reveal-item">
                         <img src="https://images.unsplash.com/photo-1523050853051-f750004c21ad?w=800&q=80" alt="Gallery 2">
                         <div class="gallery-overlay"><div class="gallery-info"><h4>Collaboration</h4><p>Semangat kebersamaan</p></div></div>
                     </div>
-                    <div class="gallery-item animate-fade-up delay-2">
+                    <div class="gallery-item reveal-item">
                         <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80" alt="Gallery 3">
                         <div class="gallery-overlay"><div class="gallery-info"><h4>Final Results</h4><p>Hasil nyata dari kegiatan</p></div></div>
                     </div>
@@ -328,44 +206,36 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h2>OSIS<span>SMAK</span>IPTO</h2>
-                <p>Membentuk pemimpin masa depan yang melayani dengan ketulusan dan berintegritas tinggi berdasarkan iman Kristiani.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index">Homepage</a></li>
-                    <li><a href="aboutus">About Us</a></li>
-                    <li><a href="anggota">Anggota</a></li>
-                    <li></li>
-                    <li><a href="acara">Acara</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><a href="#"><i class="fa-solid fa-location-dot" style="margin-right:10px;"></i> Jl. Green Ville Blok D, RT./RW:/RW.07/05, Duri Kepa, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11510, Indonesia</a></li>
-                    <li><a href="#"><i class="fa-solid fa-envelope" style="margin-right:10px;"></i> bernard_yoe@tomang.ipeka.sch.id</a></li>
-                    <li><a href="#"><i class="fa-brands fa-whatsapp" style="margin-right:10px;"></i> 08111346152</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 OSIS SMAK IPEKA Tomang. All rights reserved.</p>
-        </div>
+        <div id="global-footer"></div>
     </footer>
 
-    <script src="mobile-nav.js"></script>
+    <script>
+    fetch('components/navbar.html')
+        .then(response => response.text())
+        .then(htmlContent => {
+            document.getElementById('global-nav').innerHTML = htmlContent;
+            const currentPath = window.location.pathname.split('/').pop() || 'index';
+            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+            const mobileNavScript = document.createElement('script');
+            mobileNavScript.src = 'mobile-nav.js';
+            document.body.appendChild(mobileNavScript);
+        })
+        .catch(error => console.error('Error constructing modular navbar wrapper:', error));
+
+    fetch('components/footer.html')
+        .then(response => response.text())
+        .then(htmlContent => {
+            document.getElementById('global-footer').innerHTML = htmlContent;
+        })
+        .catch(error => console.error('Error constructing modular footer wrapper:', error));
+    </script>
+    
     <script src="scroll-reveal.js"></script>
-<script src="chatbot.js"></script>
+    <script src="chatbot.js"></script>
 </body>
 </html>
